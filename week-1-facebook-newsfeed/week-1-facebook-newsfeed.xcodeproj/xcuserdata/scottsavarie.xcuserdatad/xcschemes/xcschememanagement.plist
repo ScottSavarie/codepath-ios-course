@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Facebook Newsfeed.xcscheme</key>
+		<key>week-1-facebook-newsfeed.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5EBAD3161948AF2900F7448A</key>
+		<key>5EBAD3511948AF6C00F7448A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5EBAD3311948AF2A00F7448A</key>
+		<key>5EBAD36C1948AF6C00F7448A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

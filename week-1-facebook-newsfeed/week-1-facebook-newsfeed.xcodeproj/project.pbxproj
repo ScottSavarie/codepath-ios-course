@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EBAD3561948AF6C00F7448A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBAD3551948AF6C00F7448A /* Foundation.framework */; };
+		5EBAD3581948AF6C00F7448A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBAD3571948AF6C00F7448A /* CoreGraphics.framework */; };
+		5EBAD35A1948AF6C00F7448A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBAD3591948AF6C00F7448A /* UIKit.framework */; };
+		5EBAD3601948AF6C00F7448A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EBAD35E1948AF6C00F7448A /* InfoPlist.strings */; };
+		5EBAD3621948AF6C00F7448A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBAD3611948AF6C00F7448A /* main.m */; };
+		5EBAD3661948AF6C00F7448A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBAD3651948AF6C00F7448A /* AppDelegate.m */; };
+		5EBAD3681948AF6C00F7448A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBAD3671948AF6C00F7448A /* Images.xcassets */; };
+		5EBAD36F1948AF6C00F7448A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBAD36E1948AF6C00F7448A /* XCTest.framework */; };
+		5EBAD3701948AF6C00F7448A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBAD3551948AF6C00F7448A /* Foundation.framework */; };
+		5EBAD3711948AF6C00F7448A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBAD3591948AF6C00F7448A /* UIKit.framework */; };
+		5EBAD3791948AF6C00F7448A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EBAD3771948AF6C00F7448A /* InfoPlist.strings */; };
+		5EBAD37B1948AF6C00F7448A /* week_1_facebook_newsfeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBAD37A1948AF6C00F7448A /* week_1_facebook_newsfeedTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EBAD3721948AF6C00F7448A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EBAD34A1948AF6C00F7448A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EBAD3511948AF6C00F7448A;
+			remoteInfo = "week-1-facebook-newsfeed";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5EBAD3521948AF6C00F7448A /* week-1-facebook-newsfeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week-1-facebook-newsfeed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EBAD3551948AF6C00F7448A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5EBAD3571948AF6C00F7448A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5EBAD3591948AF6C00F7448A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5EBAD35D1948AF6C00F7448A /* week-1-facebook-newsfeed-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "week-1-facebook-newsfeed-Info.plist"; sourceTree = "<group>"; };
+		5EBAD35F1948AF6C00F7448A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5EBAD3611948AF6C00F7448A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5EBAD3631948AF6C00F7448A /* week-1-facebook-newsfeed-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "week-1-facebook-newsfeed-Prefix.pch"; sourceTree = "<group>"; };
+		5EBAD3641948AF6C00F7448A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5EBAD3651948AF6C00F7448A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5EBAD3671948AF6C00F7448A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5EBAD36D1948AF6C00F7448A /* week-1-facebook-newsfeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "week-1-facebook-newsfeedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EBAD36E1948AF6C00F7448A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5EBAD3761948AF6C00F7448A /* week-1-facebook-newsfeedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "week-1-facebook-newsfeedTests-Info.plist"; sourceTree = "<group>"; };
+		5EBAD3781948AF6C00F7448A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5EBAD37A1948AF6C00F7448A /* week_1_facebook_newsfeedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = week_1_facebook_newsfeedTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EBAD34F1948AF6C00F7448A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBAD3581948AF6C00F7448A /* CoreGraphics.framework in Frameworks */,
+				5EBAD35A1948AF6C00F7448A /* UIKit.framework in Frameworks */,
+				5EBAD3561948AF6C00F7448A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EBAD36A1948AF6C00F7448A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBAD36F1948AF6C00F7448A /* XCTest.framework in Frameworks */,
+				5EBAD3711948AF6C00F7448A /* UIKit.framework in Frameworks */,
+				5EBAD3701948AF6C00F7448A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EBAD3491948AF6C00F7448A = {
+			isa = PBXGroup;
+			children = (
+				5EBAD35B1948AF6C00F7448A /* week-1-facebook-newsfeed */,
+				5EBAD3741948AF6C00F7448A /* week-1-facebook-newsfeedTests */,
+				5EBAD3541948AF6C00F7448A /* Frameworks */,
+				5EBAD3531948AF6C00F7448A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EBAD3531948AF6C00F7448A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EBAD3521948AF6C00F7448A /* week-1-facebook-newsfeed.app */,
+				5EBAD36D1948AF6C00F7448A /* week-1-facebook-newsfeedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EBAD3541948AF6C00F7448A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EBAD3551948AF6C00F7448A /* Foundation.framework */,
+				5EBAD3571948AF6C00F7448A /* CoreGraphics.framework */,
+				5EBAD3591948AF6C00F7448A /* UIKit.framework */,
+				5EBAD36E1948AF6C00F7448A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EBAD35B1948AF6C00F7448A /* week-1-facebook-newsfeed */ = {
+			isa = PBXGroup;
+			children = (
+				5EBAD3641948AF6C00F7448A /* AppDelegate.h */,
+				5EBAD3651948AF6C00F7448A /* AppDelegate.m */,
+				5EBAD3671948AF6C00F7448A /* Images.xcassets */,
+				5EBAD35C1948AF6C00F7448A /* Supporting Files */,
+			);
+			path = "week-1-facebook-newsfeed";
+			sourceTree = "<group>";
+		};
+		5EBAD35C1948AF6C00F7448A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EBAD35D1948AF6C00F7448A /* week-1-facebook-newsfeed-Info.plist */,
+				5EBAD35E1948AF6C00F7448A /* InfoPlist.strings */,
+				5EBAD3611948AF6C00F7448A /* main.m */,
+				5EBAD3631948AF6C00F7448A /* week-1-facebook-newsfeed-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EBAD3741948AF6C00F7448A /* week-1-facebook-newsfeedTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EBAD37A1948AF6C00F7448A /* week_1_facebook_newsfeedTests.m */,
+				5EBAD3751948AF6C00F7448A /* Supporting Files */,
+			);
+			path = "week-1-facebook-newsfeedTests";
+			sourceTree = "<group>";
+		};
+		5EBAD3751948AF6C00F7448A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EBAD3761948AF6C00F7448A /* week-1-facebook-newsfeedTests-Info.plist */,
+				5EBAD3771948AF6C00F7448A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EBAD3511948AF6C00F7448A /* week-1-facebook-newsfeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EBAD37E1948AF6C00F7448A /* Build configuration list for PBXNativeTarget "week-1-facebook-newsfeed" */;
+			buildPhases = (
+				5EBAD34E1948AF6C00F7448A /* Sources */,
+				5EBAD34F1948AF6C00F7448A /* Frameworks */,
+				5EBAD3501948AF6C00F7448A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "week-1-facebook-newsfeed";
+			productName = "week-1-facebook-newsfeed";
+			productReference = 5EBAD3521948AF6C00F7448A /* week-1-facebook-newsfeed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EBAD36C1948AF6C00F7448A /* week-1-facebook-newsfeedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EBAD3811948AF6C00F7448A /* Build configuration list for PBXNativeTarget "week-1-facebook-newsfeedTests" */;
+			buildPhases = (
+				5EBAD3691948AF6C00F7448A /* Sources */,
+				5EBAD36A1948AF6C00F7448A /* Frameworks */,
+				5EBAD36B1948AF6C00F7448A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EBAD3731948AF6C00F7448A /* PBXTargetDependency */,
+			);
+			name = "week-1-facebook-newsfeedTests";
+			productName = "week-1-facebook-newsfeedTests";
+			productReference = 5EBAD36D1948AF6C00F7448A /* week-1-facebook-newsfeedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EBAD34A1948AF6C00F7448A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Scott Savarie";
+				TargetAttributes = {
+					5EBAD36C1948AF6C00F7448A = {
+						TestTargetID = 5EBAD3511948AF6C00F7448A;
+					};
+				};
+			};
+			buildConfigurationList = 5EBAD34D1948AF6C00F7448A /* Build configuration list for PBXProject "week-1-facebook-newsfeed" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5EBAD3491948AF6C00F7448A;
+			productRefGroup = 5EBAD3531948AF6C00F7448A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EBAD3511948AF6C00F7448A /* week-1-facebook-newsfeed */,
+				5EBAD36C1948AF6C00F7448A /* week-1-facebook-newsfeedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EBAD3501948AF6C00F7448A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBAD3601948AF6C00F7448A /* InfoPlist.strings in Resources */,
+				5EBAD3681948AF6C00F7448A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EBAD36B1948AF6C00F7448A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBAD3791948AF6C00F7448A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EBAD34E1948AF6C00F7448A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBAD3661948AF6C00F7448A /* AppDelegate.m in Sources */,
+				5EBAD3621948AF6C00F7448A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EBAD3691948AF6C00F7448A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBAD37B1948AF6C00F7448A /* week_1_facebook_newsfeedTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EBAD3731948AF6C00F7448A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EBAD3511948AF6C00F7448A /* week-1-facebook-newsfeed */;
+			targetProxy = 5EBAD3721948AF6C00F7448A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5EBAD35E1948AF6C00F7448A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EBAD35F1948AF6C00F7448A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5EBAD3771948AF6C00F7448A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EBAD3781948AF6C00F7448A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EBAD37C1948AF6C00F7448A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5EBAD37D1948AF6C00F7448A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EBAD37F1948AF6C00F7448A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week-1-facebook-newsfeed/week-1-facebook-newsfeed-Prefix.pch";
+				INFOPLIST_FILE = "week-1-facebook-newsfeed/week-1-facebook-newsfeed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5EBAD3801948AF6C00F7448A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week-1-facebook-newsfeed/week-1-facebook-newsfeed-Prefix.pch";
+				INFOPLIST_FILE = "week-1-facebook-newsfeed/week-1-facebook-newsfeed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5EBAD3821948AF6C00F7448A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/week-1-facebook-newsfeed.app/week-1-facebook-newsfeed";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week-1-facebook-newsfeed/week-1-facebook-newsfeed-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "week-1-facebook-newsfeedTests/week-1-facebook-newsfeedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5EBAD3831948AF6C00F7448A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/week-1-facebook-newsfeed.app/week-1-facebook-newsfeed";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "week-1-facebook-newsfeed/week-1-facebook-newsfeed-Prefix.pch";
+				INFOPLIST_FILE = "week-1-facebook-newsfeedTests/week-1-facebook-newsfeedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EBAD34D1948AF6C00F7448A /* Build configuration list for PBXProject "week-1-facebook-newsfeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EBAD37C1948AF6C00F7448A /* Debug */,
+				5EBAD37D1948AF6C00F7448A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EBAD37E1948AF6C00F7448A /* Build configuration list for PBXNativeTarget "week-1-facebook-newsfeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EBAD37F1948AF6C00F7448A /* Debug */,
+				5EBAD3801948AF6C00F7448A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5EBAD3811948AF6C00F7448A /* Build configuration list for PBXNativeTarget "week-1-facebook-newsfeedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EBAD3821948AF6C00F7448A /* Debug */,
+				5EBAD3831948AF6C00F7448A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EBAD34A1948AF6C00F7448A /* Project object */;
+}

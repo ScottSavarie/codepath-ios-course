@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5EBAD3161948AF2900F7448A"
-               BuildableName = "Facebook Newsfeed.app"
-               BlueprintName = "Facebook Newsfeed"
-               ReferencedContainer = "container:Facebook Newsfeed.xcodeproj">
+               BlueprintIdentifier = "5EBAD3511948AF6C00F7448A"
+               BuildableName = "week-1-facebook-newsfeed.app"
+               BlueprintName = "week-1-facebook-newsfeed"
+               ReferencedContainer = "container:week-1-facebook-newsfeed.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5EBAD3311948AF2A00F7448A"
-               BuildableName = "Facebook NewsfeedTests.xctest"
-               BlueprintName = "Facebook NewsfeedTests"
-               ReferencedContainer = "container:Facebook Newsfeed.xcodeproj">
+               BlueprintIdentifier = "5EBAD36C1948AF6C00F7448A"
+               BuildableName = "week-1-facebook-newsfeedTests.xctest"
+               BlueprintName = "week-1-facebook-newsfeedTests"
+               ReferencedContainer = "container:week-1-facebook-newsfeed.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EBAD3161948AF2900F7448A"
-            BuildableName = "Facebook Newsfeed.app"
-            BlueprintName = "Facebook Newsfeed"
-            ReferencedContainer = "container:Facebook Newsfeed.xcodeproj">
+            BlueprintIdentifier = "5EBAD3511948AF6C00F7448A"
+            BuildableName = "week-1-facebook-newsfeed.app"
+            BlueprintName = "week-1-facebook-newsfeed"
+            ReferencedContainer = "container:week-1-facebook-newsfeed.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EBAD3161948AF2900F7448A"
-            BuildableName = "Facebook Newsfeed.app"
-            BlueprintName = "Facebook Newsfeed"
-            ReferencedContainer = "container:Facebook Newsfeed.xcodeproj">
+            BlueprintIdentifier = "5EBAD3511948AF6C00F7448A"
+            BuildableName = "week-1-facebook-newsfeed.app"
+            BlueprintName = "week-1-facebook-newsfeed"
+            ReferencedContainer = "container:week-1-facebook-newsfeed.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EBAD3161948AF2900F7448A"
-            BuildableName = "Facebook Newsfeed.app"
-            BlueprintName = "Facebook Newsfeed"
-            ReferencedContainer = "container:Facebook Newsfeed.xcodeproj">
+            BlueprintIdentifier = "5EBAD3511948AF6C00F7448A"
+            BuildableName = "week-1-facebook-newsfeed.app"
+            BlueprintName = "week-1-facebook-newsfeed"
+            ReferencedContainer = "container:week-1-facebook-newsfeed.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

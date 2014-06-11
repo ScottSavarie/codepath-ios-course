@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Facebook Newsfeed.xcodeproj">
+      location = "self:week-1-facebook-newsfeed.xcodeproj">
    </FileRef>
 </Workspace>

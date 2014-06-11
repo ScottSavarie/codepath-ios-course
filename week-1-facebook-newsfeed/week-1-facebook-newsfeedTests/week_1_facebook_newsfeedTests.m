@@ -1,6 +1,6 @@
 //
-//  Facebook_NewsfeedTests.m
-//  Facebook NewsfeedTests
+//  week_1_facebook_newsfeedTests.m
+//  week-1-facebook-newsfeedTests
 //
 //  Created by Scott Savarie on 6/11/14.
 //  Copyright (c) 2014 Scott Savarie. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface Facebook_NewsfeedTests : XCTestCase
+@interface week_1_facebook_newsfeedTests : XCTestCase
 
 @end
 
-@implementation Facebook_NewsfeedTests
+@implementation week_1_facebook_newsfeedTests
 
 - (void)setUp
 {

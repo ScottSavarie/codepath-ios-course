@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  Facebook Newsfeed
+//  week-1-facebook-newsfeed
 //
 //  Created by Scott Savarie on 6/11/14.
 //  Copyright (c) 2014 Scott Savarie. All rights reserved.

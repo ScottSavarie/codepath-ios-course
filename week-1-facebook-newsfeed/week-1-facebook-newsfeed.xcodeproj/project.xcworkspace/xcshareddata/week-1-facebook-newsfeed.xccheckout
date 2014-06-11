@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>99B457F9-BC27-4047-932E-B2586A177060</string>
+	<string>844C0D4A-5804-4801-A702-C35674BB15C9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Facebook Newsfeed</string>
+	<string>week-1-facebook-newsfeed</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0180773E-8096-48EC-B0C0-B2EB3029CD8F</key>
 		<string>https://github.com/ScottSavarie/codepath-ios-course.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>week-1-facebook-newsfeed/Facebook Newsfeed/Facebook Newsfeed.xcodeproj/project.xcworkspace</string>
+	<string>week-1-facebook-newsfeed/week-1-facebook-newsfeed.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0180773E-8096-48EC-B0C0-B2EB3029CD8F</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ScottSavarie/codepath-ios-course.git</string>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>0180773E-8096-48EC-B0C0-B2EB3029CD8F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>codepath-ios-course</string>
+			<string>Facebook Newsfeed</string>
 		</dict>
 	</array>
 </dict>
