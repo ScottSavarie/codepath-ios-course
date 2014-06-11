@@ -7,13 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "newsFeedViewController.h"
 
 @implementation AppDelegate
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
+    // Newsfeed view controller
+    newsFeedViewController *vc = [[newsFeedViewController alloc] init];
+    
+    
+    // Newsfeed Navigation view controller
+    UINavigationController *newsFeedNavigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    newsFeedNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
+
+    
+    // Set Status Bar Color
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    
+    self.window.tintColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = newsFeedNavigationController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
