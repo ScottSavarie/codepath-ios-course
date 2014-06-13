@@ -10,6 +10,13 @@
 
 @interface newsFeedViewController ()
 @property (weak, nonatomic) IBOutlet UIView *storyContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *storyImgView;
+
+
+
+
+
+
 
 @end
 
@@ -22,13 +29,6 @@
         // Custom initialization
         self.title = @"Post";
         
-
-
-        
-       
-        
-        
-        
     }
     return self;
 }
@@ -40,7 +40,18 @@
     
     
     // Card Syling
-    self.storyContainer.layer.cornerRadius = 4;
+    self.storyContainer.layer.cornerRadius = 2;
+    self.storyContainer.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.storyContainer.layer.shadowOffset = CGSizeMake(0, 1);
+    self.storyContainer.layer.shadowOpacity = 0.1;
+    self.storyContainer.layer.shadowRadius = 2;
+    
+    // Image Styling
+    self.storyImgView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.storyImgView.layer.shadowOffset = CGSizeMake(0,1);
+    self.storyImgView.layer.shadowOpacity= 0.5;
+    self.storyImgView.layer.shadowRadius = 1;
+    
     
     // Make title white
     UIColor *white = [UIColor whiteColor];
@@ -48,6 +59,7 @@
     [navBarTextAttributes setObject:white forKey:NSForegroundColorAttributeName ];
     self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
     
+
 
     
 
