@@ -13,9 +13,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *storyImgView;
 
 
+@property (weak, nonatomic) IBOutlet UIView *commentBar;
 
 
 
+
+- (IBAction)writeComment:(id)sender;
 
 
 @end
@@ -60,11 +63,19 @@
     self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
     
 
-
+    // Comment Bar Styling
+    self.commentBar.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.commentBar.layer.shadowOffset = CGSizeMake(0, -1);
+    self.commentBar.layer.shadowOpacity = 0.1;
+    self.commentBar.layer.shadowRadius = 1;
     
-
-
-
+    
+    // Set up Tap Gesture
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyBoard)];
+    
+    [self.view addGestureRecognizer:tapGesture];
+    
+    
 
     
 }
@@ -74,5 +85,43 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+// dismiss keyboard
+
+-(void)hideKeyBoard {
+    [self.view endEditing:YES];
+
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    self.commentBar.center = CGPointMake(160, 500);
+    [UIView commitAnimations];
+    
+    
+}
+
+
+// Comment tap - move comment view
+
+
+- (IBAction)writeComment:(id)sender {
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    self.commentBar.center = CGPointMake(160, 330);
+    [UIView commitAnimations];
+    
+}
+
+
+    
+
+    
+
+
+
+
 
 @end

@@ -30,7 +30,6 @@
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
     
-    self.window.tintColor = [UIColor whiteColor];
     
     self.window.rootViewController = newsFeedNavigationController;
     
