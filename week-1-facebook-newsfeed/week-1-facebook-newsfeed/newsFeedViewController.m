@@ -7,10 +7,12 @@
 //
 
 #import "newsFeedViewController.h"
+#import "TTTAttributedLabel.h"
 
 @interface newsFeedViewController ()
 @property (weak, nonatomic) IBOutlet UIView *storyContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *storyImgView;
+
 
 
 @property (weak, nonatomic) IBOutlet UIView *commentBar;
@@ -76,9 +78,27 @@
     [self.view addGestureRecognizer:tapGesture];
     
     
-
     
+    
+    // Create TTT Label inside other view and style link
+    TTTAttributedLabel *storyLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(10, 0, 280, 200)];
+    storyLabel.font = [UIFont systemFontOfSize:14];
+    storyLabel.textColor = [UIColor darkGrayColor];
+    storyLabel.numberOfLines = 0;
+    storyLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
+    storyLabel.delegate = self;
+    storyLabel.userInteractionEnabled=YES;
+    storyLabel.text = @"From collarless shirts to high-waisted pants, #Her's costume designer, Casey Storm, explains how he created his fashion looks for the future: http://bit.ly/jV9zM8";
+    
+    [self.storyContainer addSubview:storyLabel];
+    
+    storyLabel.linkAttributes = @{
+        NSForegroundColorAttributeName: [UIColor purpleColor],
+        NSUnderlineStyleAttributeName: @(NSUnderlineStyleNone),
+    };
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -104,7 +124,6 @@
 
 
 // Comment tap - move comment view
-
 
 - (IBAction)writeComment:(id)sender {
     

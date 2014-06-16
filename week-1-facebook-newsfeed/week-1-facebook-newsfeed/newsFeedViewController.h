@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TTTAttributedLabel.h>
 
-@interface newsFeedViewController : UIViewController
+@interface newsFeedViewController : UIViewController <TTTAttributedLabelDelegate>{
+}
+
 
 @end
