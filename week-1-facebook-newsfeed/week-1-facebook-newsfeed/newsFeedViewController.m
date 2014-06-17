@@ -13,15 +13,17 @@
 @property (weak, nonatomic) IBOutlet UIView *storyContainer;
 @property (weak, nonatomic) IBOutlet UIImageView *storyImgView;
 
+@property (weak, nonatomic) IBOutlet UITextField *commentTextField;
+
+
 
 
 @property (weak, nonatomic) IBOutlet UIView *commentBar;
 
 
-
+- (IBAction)commentTap:(id)sender;
 
 - (IBAction)writeComment:(id)sender;
-
 
 @end
 
@@ -93,8 +95,8 @@
     [self.storyContainer addSubview:storyLabel];
     
     storyLabel.linkAttributes = @{
-        NSForegroundColorAttributeName: [UIColor purpleColor],
-        NSUnderlineStyleAttributeName: @(NSUnderlineStyleNone),
+        NSForegroundColorAttributeName: [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1],
+        NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),
     };
 
 }
@@ -112,33 +114,47 @@
 // dismiss keyboard
 
 -(void)hideKeyBoard {
+    
     [self.view endEditing:YES];
 
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
-    self.commentBar.center = CGPointMake(160, 500);
+    self.commentBar.center = CGPointMake(160, 503);
     [UIView commitAnimations];
     
     
 }
 
 
-// Comment tap - move comment view
+// Comment Text Field tap - move comment view
 
 - (IBAction)writeComment:(id)sender {
     
     [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
+    [UIView setAnimationDuration:0.26];
     self.commentBar.center = CGPointMake(160, 330);
     [UIView commitAnimations];
     
 }
 
 
+// Comment button tap
+- (IBAction)commentTap:(id)sender {
     
+    [self.commentTextField becomeFirstResponder];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3];
+    self.commentBar.center = CGPointMake(160, 330);
+    [UIView commitAnimations];
+}
 
-    
 
+// Interact with link
+
+- (void)attributedLabel:(TTTAttributedLabel *)storyLabel didSelectLinkWithURL:(NSURL *)url {
+
+    NSLog(@"selected");
+}
 
 
 

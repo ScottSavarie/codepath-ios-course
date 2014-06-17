@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newsFeedViewController">
             <connections>
                 <outlet property="commentBar" destination="upJ-si-PoF" id="3jp-gw-M2R"/>
+                <outlet property="commentTextField" destination="6eI-97-Y2E" id="bcz-WH-I7l"/>
                 <outlet property="storyContainer" destination="djX-dn-oX4" id="ZuA-p9-8Nl"/>
                 <outlet property="storyImgView" destination="n6U-bn-OsT" id="CcV-LH-mcV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djX-dn-oX4">
-                    <rect key="frame" x="10" y="74" width="300" height="456"/>
+                    <rect key="frame" x="10" y="75" width="300" height="456"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="iiE-9i-KeK">
@@ -40,11 +41,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_bg_rpt" translatesAutoresizingMaskIntoConstraints="NO" id="m9U-yE-oSf">
-                            <rect key="frame" x="0.0" y="337" width="300" height="47"/>
+                            <rect key="frame" x="0.0" y="327" width="300" height="47"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZz-qR-Zt6">
-                            <rect key="frame" x="10" y="341" width="86" height="40"/>
+                            <rect key="frame" x="10" y="331" width="86" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <gestureRecognizers/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -56,7 +57,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFR-Je-rFC">
-                            <rect key="frame" x="100" y="341" width="115" height="40"/>
+                            <rect key="frame" x="100" y="331" width="115" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <gestureRecognizers/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -66,9 +67,12 @@
                             <state key="highlighted" title="  Comment">
                                 <color key="titleColor" white="0.43795620439999999" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="commentTap:" destination="-1" eventType="touchUpInside" id="uWW-yQ-AA0"/>
+                            </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5g-Qt-bcA">
-                            <rect key="frame" x="14" y="394" width="195" height="21"/>
+                            <rect key="frame" x="14" y="382" width="195" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <attributedString key="attributedText">
                                 <fragment content="1,675 people">
@@ -94,7 +98,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4FZ-zr-93q">
-                    <rect key="frame" x="5" y="218" width="310" height="173"/>
+                    <rect key="frame" x="5" y="216" width="310" height="173"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_image" translatesAutoresizingMaskIntoConstraints="NO" id="n6U-bn-OsT">
@@ -105,21 +109,21 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upJ-si-PoF">
-                    <rect key="frame" x="0.0" y="473" width="320" height="53"/>
+                    <rect key="frame" x="0.0" y="482" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment" minimumFontSize="17" background="textField" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-97-Y2E">
-                            <rect key="frame" x="20" y="12" width="223" height="30"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment" minimumFontSize="17" background="textFieldLong" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-97-Y2E">
+                            <rect key="frame" x="11" y="7" width="248" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                             <connections>
                                 <action selector="addCommentTap:" destination="-1" eventType="touchUpInside" id="pvA-cg-f5d"/>
                                 <action selector="writeComment:" destination="-1" eventType="editingDidBegin" id="tXT-s0-8gb"/>
                             </connections>
                         </textField>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmR-et-6KB">
-                            <rect key="frame" x="258" y="17" width="35" height="21"/>
+                            <rect key="frame" x="273" y="12" width="35" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -147,6 +151,6 @@
         <image name="like" width="17" height="40"/>
         <image name="like_selected" width="17" height="40"/>
         <image name="tabBar" width="320" height="44"/>
-        <image name="textField" width="47" height="32"/>
+        <image name="textFieldLong" width="305" height="32"/>
     </resources>
 </document>
