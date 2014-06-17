@@ -99,6 +99,16 @@
         NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),
     };
 
+
+    
+    // Textfield Padding
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    self.commentTextField.leftView = paddingView;
+    self.commentTextField.leftViewMode = UITextFieldViewModeAlways;
+
+
+
+
 }
 
 
@@ -155,6 +165,8 @@
 
     NSLog(@"selected");
 }
+
+
 
 
 

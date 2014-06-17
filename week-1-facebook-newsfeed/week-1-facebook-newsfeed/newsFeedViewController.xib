@@ -112,7 +112,7 @@
                     <rect key="frame" x="0.0" y="482" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment" minimumFontSize="17" background="textFieldLong" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-97-Y2E">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Write a comment" minimumFontSize="17" background="textFieldLong" disabledBackground="textFieldLong" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-97-Y2E">
                             <rect key="frame" x="11" y="7" width="248" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
