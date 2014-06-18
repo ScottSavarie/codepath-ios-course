@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EA2C91519521BC800EE9B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91419521BC800EE9B25 /* Foundation.framework */; };
+		5EA2C91719521BC800EE9B25 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91619521BC800EE9B25 /* CoreGraphics.framework */; };
+		5EA2C91919521BC800EE9B25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91819521BC800EE9B25 /* UIKit.framework */; };
+		5EA2C91F19521BC800EE9B25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C91D19521BC800EE9B25 /* InfoPlist.strings */; };
+		5EA2C92119521BC800EE9B25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C92019521BC800EE9B25 /* main.m */; };
+		5EA2C92519521BC800EE9B25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C92419521BC800EE9B25 /* AppDelegate.m */; };
+		5EA2C92719521BC800EE9B25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C92619521BC800EE9B25 /* Images.xcassets */; };
+		5EA2C92E19521BC800EE9B25 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C92D19521BC800EE9B25 /* XCTest.framework */; };
+		5EA2C92F19521BC800EE9B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91419521BC800EE9B25 /* Foundation.framework */; };
+		5EA2C93019521BC800EE9B25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91819521BC800EE9B25 /* UIKit.framework */; };
+		5EA2C93819521BC800EE9B25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C93619521BC800EE9B25 /* InfoPlist.strings */; };
+		5EA2C93A19521BC800EE9B25 /* facebook_loginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C93919521BC800EE9B25 /* facebook_loginTests.m */; };
+		5EA2C94619521C1300EE9B25 /* newsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C94419521C1300EE9B25 /* newsFeedViewController.m */; };
+		5EA2C94719521C1300EE9B25 /* newsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C94519521C1300EE9B25 /* newsFeedViewController.xib */; };
+		5EA2C94B19521C2300EE9B25 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C94919521C2300EE9B25 /* loginViewController.m */; };
+		5EA2C94C19521C2300EE9B25 /* loginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C94A19521C2300EE9B25 /* loginViewController.xib */; };
+		5EA2C95019521C5900EE9B25 /* requestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C94E19521C5900EE9B25 /* requestsViewController.m */; };
+		5EA2C95119521C5900EE9B25 /* requestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C94F19521C5900EE9B25 /* requestsViewController.xib */; };
+		5EA2C95519521C6C00EE9B25 /* notificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C95319521C6C00EE9B25 /* notificationsViewController.m */; };
+		5EA2C95619521C6C00EE9B25 /* notificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C95419521C6C00EE9B25 /* notificationsViewController.xib */; };
+		5EA2C95A19521C7A00EE9B25 /* moreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C95819521C7A00EE9B25 /* moreViewController.m */; };
+		5EA2C95B19521C7A00EE9B25 /* moreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C95919521C7A00EE9B25 /* moreViewController.xib */; };
+		5EA2C96019521CCE00EE9B25 /* messagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2C95E19521CCE00EE9B25 /* messagesViewController.m */; };
+		5EA2C96119521CCE00EE9B25 /* messagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2C95F19521CCE00EE9B25 /* messagesViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EA2C93119521BC800EE9B25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EA2C90919521BC800EE9B25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EA2C91019521BC800EE9B25;
+			remoteInfo = "facebook-login";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5EA2C91119521BC800EE9B25 /* facebook-login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "facebook-login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA2C91419521BC800EE9B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5EA2C91619521BC800EE9B25 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5EA2C91819521BC800EE9B25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5EA2C91C19521BC800EE9B25 /* facebook-login-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "facebook-login-Info.plist"; sourceTree = "<group>"; };
+		5EA2C91E19521BC800EE9B25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5EA2C92019521BC800EE9B25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5EA2C92219521BC800EE9B25 /* facebook-login-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "facebook-login-Prefix.pch"; sourceTree = "<group>"; };
+		5EA2C92319521BC800EE9B25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5EA2C92419521BC800EE9B25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5EA2C92619521BC800EE9B25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5EA2C92C19521BC800EE9B25 /* facebook-loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "facebook-loginTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA2C92D19521BC800EE9B25 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5EA2C93519521BC800EE9B25 /* facebook-loginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "facebook-loginTests-Info.plist"; sourceTree = "<group>"; };
+		5EA2C93719521BC800EE9B25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5EA2C93919521BC800EE9B25 /* facebook_loginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = facebook_loginTests.m; sourceTree = "<group>"; };
+		5EA2C94319521C1300EE9B25 /* newsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsFeedViewController.h; sourceTree = "<group>"; };
+		5EA2C94419521C1300EE9B25 /* newsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsFeedViewController.m; sourceTree = "<group>"; };
+		5EA2C94519521C1300EE9B25 /* newsFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsFeedViewController.xib; sourceTree = "<group>"; };
+		5EA2C94819521C2300EE9B25 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		5EA2C94919521C2300EE9B25 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		5EA2C94A19521C2300EE9B25 /* loginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginViewController.xib; sourceTree = "<group>"; };
+		5EA2C94D19521C5900EE9B25 /* requestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requestsViewController.h; sourceTree = "<group>"; };
+		5EA2C94E19521C5900EE9B25 /* requestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = requestsViewController.m; sourceTree = "<group>"; };
+		5EA2C94F19521C5900EE9B25 /* requestsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = requestsViewController.xib; sourceTree = "<group>"; };
+		5EA2C95219521C6C00EE9B25 /* notificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = notificationsViewController.h; sourceTree = "<group>"; };
+		5EA2C95319521C6C00EE9B25 /* notificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = notificationsViewController.m; sourceTree = "<group>"; };
+		5EA2C95419521C6C00EE9B25 /* notificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = notificationsViewController.xib; sourceTree = "<group>"; };
+		5EA2C95719521C7A00EE9B25 /* moreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moreViewController.h; sourceTree = "<group>"; };
+		5EA2C95819521C7A00EE9B25 /* moreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moreViewController.m; sourceTree = "<group>"; };
+		5EA2C95919521C7A00EE9B25 /* moreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = moreViewController.xib; sourceTree = "<group>"; };
+		5EA2C95D19521CCE00EE9B25 /* messagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messagesViewController.h; sourceTree = "<group>"; };
+		5EA2C95E19521CCE00EE9B25 /* messagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messagesViewController.m; sourceTree = "<group>"; };
+		5EA2C95F19521CCE00EE9B25 /* messagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = messagesViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EA2C90E19521BC800EE9B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2C91719521BC800EE9B25 /* CoreGraphics.framework in Frameworks */,
+				5EA2C91919521BC800EE9B25 /* UIKit.framework in Frameworks */,
+				5EA2C91519521BC800EE9B25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EA2C92919521BC800EE9B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2C92E19521BC800EE9B25 /* XCTest.framework in Frameworks */,
+				5EA2C93019521BC800EE9B25 /* UIKit.framework in Frameworks */,
+				5EA2C92F19521BC800EE9B25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EA2C90819521BC800EE9B25 = {
+			isa = PBXGroup;
+			children = (
+				5EA2C91A19521BC800EE9B25 /* facebook-login */,
+				5EA2C93319521BC800EE9B25 /* facebook-loginTests */,
+				5EA2C91319521BC800EE9B25 /* Frameworks */,
+				5EA2C91219521BC800EE9B25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EA2C91219521BC800EE9B25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2C91119521BC800EE9B25 /* facebook-login.app */,
+				5EA2C92C19521BC800EE9B25 /* facebook-loginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EA2C91319521BC800EE9B25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2C91419521BC800EE9B25 /* Foundation.framework */,
+				5EA2C91619521BC800EE9B25 /* CoreGraphics.framework */,
+				5EA2C91819521BC800EE9B25 /* UIKit.framework */,
+				5EA2C92D19521BC800EE9B25 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EA2C91A19521BC800EE9B25 /* facebook-login */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2C95C19521C8300EE9B25 /* viewControllers */,
+				5EA2C92319521BC800EE9B25 /* AppDelegate.h */,
+				5EA2C92419521BC800EE9B25 /* AppDelegate.m */,
+				5EA2C92619521BC800EE9B25 /* Images.xcassets */,
+				5EA2C91B19521BC800EE9B25 /* Supporting Files */,
+			);
+			path = "facebook-login";
+			sourceTree = "<group>";
+		};
+		5EA2C91B19521BC800EE9B25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2C91C19521BC800EE9B25 /* facebook-login-Info.plist */,
+				5EA2C91D19521BC800EE9B25 /* InfoPlist.strings */,
+				5EA2C92019521BC800EE9B25 /* main.m */,
+				5EA2C92219521BC800EE9B25 /* facebook-login-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EA2C93319521BC800EE9B25 /* facebook-loginTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2C93919521BC800EE9B25 /* facebook_loginTests.m */,
+				5EA2C93419521BC800EE9B25 /* Supporting Files */,
+			);
+			path = "facebook-loginTests";
+			sourceTree = "<group>";
+		};
+		5EA2C93419521BC800EE9B25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2C93519521BC800EE9B25 /* facebook-loginTests-Info.plist */,
+				5EA2C93619521BC800EE9B25 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EA2C95C19521C8300EE9B25 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2C94319521C1300EE9B25 /* newsFeedViewController.h */,
+				5EA2C94419521C1300EE9B25 /* newsFeedViewController.m */,
+				5EA2C94519521C1300EE9B25 /* newsFeedViewController.xib */,
+				5EA2C94819521C2300EE9B25 /* loginViewController.h */,
+				5EA2C94919521C2300EE9B25 /* loginViewController.m */,
+				5EA2C94A19521C2300EE9B25 /* loginViewController.xib */,
+				5EA2C94D19521C5900EE9B25 /* requestsViewController.h */,
+				5EA2C94E19521C5900EE9B25 /* requestsViewController.m */,
+				5EA2C94F19521C5900EE9B25 /* requestsViewController.xib */,
+				5EA2C95219521C6C00EE9B25 /* notificationsViewController.h */,
+				5EA2C95319521C6C00EE9B25 /* notificationsViewController.m */,
+				5EA2C95419521C6C00EE9B25 /* notificationsViewController.xib */,
+				5EA2C95719521C7A00EE9B25 /* moreViewController.h */,
+				5EA2C95819521C7A00EE9B25 /* moreViewController.m */,
+				5EA2C95919521C7A00EE9B25 /* moreViewController.xib */,
+				5EA2C95D19521CCE00EE9B25 /* messagesViewController.h */,
+				5EA2C95E19521CCE00EE9B25 /* messagesViewController.m */,
+				5EA2C95F19521CCE00EE9B25 /* messagesViewController.xib */,
+			);
+			name = viewControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EA2C91019521BC800EE9B25 /* facebook-login */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EA2C93D19521BC800EE9B25 /* Build configuration list for PBXNativeTarget "facebook-login" */;
+			buildPhases = (
+				5EA2C90D19521BC800EE9B25 /* Sources */,
+				5EA2C90E19521BC800EE9B25 /* Frameworks */,
+				5EA2C90F19521BC800EE9B25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "facebook-login";
+			productName = "facebook-login";
+			productReference = 5EA2C91119521BC800EE9B25 /* facebook-login.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EA2C92B19521BC800EE9B25 /* facebook-loginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EA2C94019521BC800EE9B25 /* Build configuration list for PBXNativeTarget "facebook-loginTests" */;
+			buildPhases = (
+				5EA2C92819521BC800EE9B25 /* Sources */,
+				5EA2C92919521BC800EE9B25 /* Frameworks */,
+				5EA2C92A19521BC800EE9B25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EA2C93219521BC800EE9B25 /* PBXTargetDependency */,
+			);
+			name = "facebook-loginTests";
+			productName = "facebook-loginTests";
+			productReference = 5EA2C92C19521BC800EE9B25 /* facebook-loginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EA2C90919521BC800EE9B25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Scott Savarie";
+				TargetAttributes = {
+					5EA2C92B19521BC800EE9B25 = {
+						TestTargetID = 5EA2C91019521BC800EE9B25;
+					};
+				};
+			};
+			buildConfigurationList = 5EA2C90C19521BC800EE9B25 /* Build configuration list for PBXProject "facebook-login" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5EA2C90819521BC800EE9B25;
+			productRefGroup = 5EA2C91219521BC800EE9B25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EA2C91019521BC800EE9B25 /* facebook-login */,
+				5EA2C92B19521BC800EE9B25 /* facebook-loginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EA2C90F19521BC800EE9B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2C95119521C5900EE9B25 /* requestsViewController.xib in Resources */,
+				5EA2C94C19521C2300EE9B25 /* loginViewController.xib in Resources */,
+				5EA2C96119521CCE00EE9B25 /* messagesViewController.xib in Resources */,
+				5EA2C91F19521BC800EE9B25 /* InfoPlist.strings in Resources */,
+				5EA2C95B19521C7A00EE9B25 /* moreViewController.xib in Resources */,
+				5EA2C95619521C6C00EE9B25 /* notificationsViewController.xib in Resources */,
+				5EA2C92719521BC800EE9B25 /* Images.xcassets in Resources */,
+				5EA2C94719521C1300EE9B25 /* newsFeedViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EA2C92A19521BC800EE9B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2C93819521BC800EE9B25 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EA2C90D19521BC800EE9B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2C94B19521C2300EE9B25 /* loginViewController.m in Sources */,
+				5EA2C95A19521C7A00EE9B25 /* moreViewController.m in Sources */,
+				5EA2C96019521CCE00EE9B25 /* messagesViewController.m in Sources */,
+				5EA2C95519521C6C00EE9B25 /* notificationsViewController.m in Sources */,
+				5EA2C92519521BC800EE9B25 /* AppDelegate.m in Sources */,
+				5EA2C94619521C1300EE9B25 /* newsFeedViewController.m in Sources */,
+				5EA2C95019521C5900EE9B25 /* requestsViewController.m in Sources */,
+				5EA2C92119521BC800EE9B25 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EA2C92819521BC800EE9B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2C93A19521BC800EE9B25 /* facebook_loginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EA2C93219521BC800EE9B25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EA2C91019521BC800EE9B25 /* facebook-login */;
+			targetProxy = 5EA2C93119521BC800EE9B25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5EA2C91D19521BC800EE9B25 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EA2C91E19521BC800EE9B25 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5EA2C93619521BC800EE9B25 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EA2C93719521BC800EE9B25 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EA2C93B19521BC800EE9B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5EA2C93C19521BC800EE9B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EA2C93E19521BC800EE9B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "facebook-login/facebook-login-Prefix.pch";
+				INFOPLIST_FILE = "facebook-login/facebook-login-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5EA2C93F19521BC800EE9B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "facebook-login/facebook-login-Prefix.pch";
+				INFOPLIST_FILE = "facebook-login/facebook-login-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5EA2C94119521BC800EE9B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/facebook-login.app/facebook-login";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "facebook-login/facebook-login-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "facebook-loginTests/facebook-loginTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5EA2C94219521BC800EE9B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/facebook-login.app/facebook-login";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "facebook-login/facebook-login-Prefix.pch";
+				INFOPLIST_FILE = "facebook-loginTests/facebook-loginTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EA2C90C19521BC800EE9B25 /* Build configuration list for PBXProject "facebook-login" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA2C93B19521BC800EE9B25 /* Debug */,
+				5EA2C93C19521BC800EE9B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EA2C93D19521BC800EE9B25 /* Build configuration list for PBXNativeTarget "facebook-login" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA2C93E19521BC800EE9B25 /* Debug */,
+				5EA2C93F19521BC800EE9B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5EA2C94019521BC800EE9B25 /* Build configuration list for PBXNativeTarget "facebook-loginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA2C94119521BC800EE9B25 /* Debug */,
+				5EA2C94219521BC800EE9B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EA2C90919521BC800EE9B25 /* Project object */;
+}
