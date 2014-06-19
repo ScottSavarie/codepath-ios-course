@@ -8,6 +8,13 @@
 
 #import "AppDelegate.h"
 #import "loginViewController.h"
+#import "requestsViewController.h"
+#import "newsFeedViewController.h"
+#import "messagesViewController.h"
+#import "notificationsViewController.h"
+#import "moreViewController.h"
+
+
 
 @implementation AppDelegate
 
@@ -16,9 +23,53 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     
-    // Set Root View Controller
-    loginViewController *vc = [[loginViewController alloc] init];
-    self.window.rootViewController = vc;
+    // Set Root View Controller Login in
+//    loginViewController *vc = [[loginViewController alloc] init];
+//    self.window.rootViewController = vc;
+    
+    
+    
+    // Newsfeed View Controller / Nav controller
+    newsFeedViewController *newsFeedVC = [[newsFeedViewController alloc] init];
+    UINavigationController *newsfeedNavController = [[UINavigationController alloc] initWithRootViewController:newsFeedVC];
+    newsfeedNavController.tabBarItem.title = @"NewsFeed";
+    
+    
+    
+    // Requests View Controller / Nav controller
+    requestsViewController *requestVC = [[requestsViewController alloc] init];
+    UINavigationController *requestNavController = [[UINavigationController alloc] initWithRootViewController:requestVC];
+    requestNavController.tabBarItem.title = @"Requests";
+    
+    
+    // Messages View Controller / Nav controller
+    messagesViewController *messagesVC = [[messagesViewController alloc] init];
+    UINavigationController *messagesNavController = [[UINavigationController alloc] initWithRootViewController:messagesVC];
+    messagesNavController.tabBarItem.title = @"Messages";
+    
+    // Notifications View Controller / Nav controller
+    notificationsViewController *notificationsVC = [[notificationsViewController alloc] init];
+    UINavigationController *notificationsNavController = [[UINavigationController alloc] initWithRootViewController:notificationsVC];
+    notificationsNavController.tabBarItem.title = @"Notifications";
+    
+    // More View Controller / Nav controller
+    moreViewController *moreVC = [[moreViewController alloc] init];
+    UINavigationController *moreNavController = [[UINavigationController alloc] initWithRootViewController:moreVC];
+    moreNavController.tabBarItem.title = @"More";
+
+    
+    // Configure the tab bar controller
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[newsfeedNavController, requestNavController, messagesNavController, notificationsNavController, moreNavController];
+    
+    self.window.rootViewController = tabBarController;
+    
+    
+    
+    
+    
+    
+    
 
     // Make status bar white
     [application setStatusBarStyle:UIStatusBarStyleLightContent];

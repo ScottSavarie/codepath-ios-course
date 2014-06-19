@@ -7,6 +7,7 @@
 //
 
 #import "newsFeedViewController.h"
+#import "loginViewController.h"
 
 @interface newsFeedViewController ()
 
@@ -26,7 +27,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    UIViewController *vc = [[loginViewController alloc] init];
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:vc animated:NO completion:nil];
+    
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

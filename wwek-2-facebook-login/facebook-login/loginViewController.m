@@ -54,6 +54,8 @@
     
     //disable btn
     self.loginButton.enabled = NO;
+    
+    
 
     
 
@@ -195,13 +197,10 @@
     }
     
     else {
+        // dismiss login modal
+        [self dismissViewControllerAnimated:YES completion:nil];
         
-        UIViewController *vc = [[newsFeedViewController alloc] init];
-        vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        [self presentViewController:vc animated:YES completion:nil];
-        
-
-         }
+    }
     
 }
 
