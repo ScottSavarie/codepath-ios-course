@@ -6,9 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="loginViewController">
             <connections>
+                <outlet property="emailTextField" destination="rtJ-wW-ILc" id="uWo-le-HAr"/>
                 <outlet property="loginActivityIndicator" destination="aGN-MF-n8X" id="xfP-kZ-C98"/>
                 <outlet property="loginButton" destination="gHd-Y0-tsF" id="VaO-1d-4TD"/>
                 <outlet property="loginFieldContainer" destination="WOF-TA-bpD" id="gqe-NK-Pwb"/>
+                <outlet property="passwordTextField" destination="wLs-Mg-f9a" id="vUW-UM-AR6"/>
                 <outlet property="signUpText" destination="P72-zQ-cLj" id="nTV-Ei-eL6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,15 +35,17 @@
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <action selector="emailEditingBegin:" destination="-1" eventType="editingDidBegin" id="PP3-Ig-gow"/>
+                                <action selector="emailEditingChanged:" destination="-1" eventType="editingChanged" id="5kp-db-JGX"/>
                             </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLs-Mg-f9a">
                             <rect key="frame" x="26" y="61" width="268" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             <connections>
-                                <action selector="passwordEditingBegin:" destination="-1" eventType="editingDidEnd" id="VPS-lV-AOi"/>
+                                <action selector="passwordEditingBegin:" destination="-1" eventType="editingDidBegin" id="M3h-sw-p4k"/>
+                                <action selector="passwordEditingChanged:" destination="-1" eventType="editingChanged" id="XmN-dr-2Kc"/>
                             </connections>
                         </textField>
                     </subviews>
@@ -54,16 +58,20 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHd-Y0-tsF">
                     <rect key="frame" x="15" y="333" width="290" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.059999999999999998" colorSpace="deviceRGB"/>
                     <state key="normal" title="Log In">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" red="0.57230681180953979" green="0.17561490387472245" blue="0.17561490387472245" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="loginButtonOnTap:" destination="-1" eventType="touchUpInside" id="eSk-rP-WGc"/>
                     </connections>
                 </button>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="aGN-MF-n8X">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="aGN-MF-n8X">
                     <rect key="frame" x="274" y="348" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>

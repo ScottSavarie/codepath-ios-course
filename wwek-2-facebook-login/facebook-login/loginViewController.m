@@ -7,25 +7,30 @@
 //
 
 #import "loginViewController.h"
+#import "newsFeedViewController.h"
 
 @interface loginViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *loginFieldContainer;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loginActivityIndicator;
-
 @property (weak, nonatomic) IBOutlet UIButton *signUpText;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
 
 - (IBAction)onTapOutside:(id)sender;
 - (IBAction)emailEditingBegin:(id)sender;
-- (IBAction)passwordEditingBegin:(id)sender;
 - (IBAction)loginButtonOnTap:(id)sender;
+- (IBAction)passwordEditingBegin:(id)sender;
+- (IBAction)emailEditingChanged:(id)sender;
+- (IBAction)passwordEditingChanged:(id)sender;
 
 
 -(void)loginUpAnimation;
 -(void)loginDownAnimation;
-
-
+-(void)textInFieldsCheck;
+-(void)passwordCheck;
 
 
 @end
@@ -47,7 +52,9 @@
     
     
     
-    //get loginFieldContainer position
+    //disable btn
+    self.loginButton.enabled = NO;
+
     
 
     
@@ -79,8 +86,8 @@
         self.loginButton.frame.origin.x,
         253,
         self.loginButton.frame.size.width,
-        self.loginButton.frame.size.height
-       );
+        self.loginButton.frame.size.height);
+        self.loginActivityIndicator.frame = CGRectMake(274, 268, self.loginActivityIndicator.frame.size.width, self.loginActivityIndicator.frame.size.height);
     }];
     
     [UIView animateWithDuration:0.6 animations:^{
@@ -110,8 +117,9 @@
         self.loginButton.frame.origin.x,
         333,
         self.loginButton.frame.size.width,
-        self.loginButton.frame.size.height
-       );
+        self.loginButton.frame.size.height);
+        self.loginActivityIndicator.frame = CGRectMake(274, 348, self.loginActivityIndicator.frame.size.width, self.loginActivityIndicator.frame.size.height);
+
     }];
     
     [UIView animateWithDuration:0.6 animations:^{
@@ -125,29 +133,89 @@
 }
 
 
+
+// Tap outside
 - (IBAction)onTapOutside:(id)sender {
     [self.view endEditing:YES];
     [self loginDownAnimation];
 }
 
+
+
+// Email Activities
 - (IBAction)emailEditingBegin:(id)sender {
-   [self loginUpAnimation];
+    [self loginUpAnimation];
+
+}
+
+- (IBAction)emailEditingChanged:(id)sender {
+    [self textInFieldsCheck];
 }
 
 
+// Password Activities
 - (IBAction)passwordEditingBegin:(id)sender {
-   [self loginUpAnimation];
+    [self loginUpAnimation];
+}
+
+
+- (IBAction)passwordEditingChanged:(id)sender {
+    [self textInFieldsCheck];
+}
+
+
+
+// Text in Fields Check
+-(void)textInFieldsCheck{
+
+    if (self.emailTextField.text.length > 0 && self.passwordTextField.text.length > 0) {
+        self.loginButton.enabled = YES;
+    }
+    
+    else {
+       self.loginButton.enabled = NO;
+    }
+
+}
+
+// Password Check
+-(void)passwordCheck {
+    if (![self.passwordTextField.text  isEqualToString: @"password"]) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Incorrect Password Brah"
+        message: @"Yo dog, you used the wrong password :("
+        delegate: self
+        cancelButtonTitle:@"Ok"
+        otherButtonTitles: nil];
+        [alert show];
+        [self.loginActivityIndicator stopAnimating];
+        self.loginButton.enabled = YES;
+        self.passwordTextField.text = nil;
+        [self.loginButton setTitle:@"Log In" forState:UIControlStateNormal];
+        
+    }
+    
+    else {
+        
+        UIViewController *vc = [[newsFeedViewController alloc] init];
+        vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:vc animated:YES completion:nil];
+        
+
+         }
     
 }
 
 
-
-
+// Login Button
 - (IBAction)loginButtonOnTap:(id)sender {
     [self loginDownAnimation];
     [self.view endEditing:YES];
-    
+    [self.loginButton setTitle:@"Loggin In" forState:UIControlStateNormal];
+    [self performSelector:@selector(passwordCheck) withObject:nil afterDelay:2];
+    [self.loginActivityIndicator startAnimating];
+    self.loginButton.enabled = YES;
 }
+
 
 
 
