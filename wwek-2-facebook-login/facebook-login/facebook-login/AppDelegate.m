@@ -22,17 +22,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    
-    // Set Root View Controller Login in
-//    loginViewController *vc = [[loginViewController alloc] init];
-//    self.window.rootViewController = vc;
-    
-    
-    
+
     // Newsfeed View Controller / Nav controller
     newsFeedViewController *newsFeedVC = [[newsFeedViewController alloc] init];
     UINavigationController *newsfeedNavController = [[UINavigationController alloc] initWithRootViewController:newsFeedVC];
     newsfeedNavController.tabBarItem.title = @"NewsFeed";
+    newsfeedNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
     
     
     
@@ -40,22 +35,28 @@
     requestsViewController *requestVC = [[requestsViewController alloc] init];
     UINavigationController *requestNavController = [[UINavigationController alloc] initWithRootViewController:requestVC];
     requestNavController.tabBarItem.title = @"Requests";
+    requestNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
     
     
     // Messages View Controller / Nav controller
     messagesViewController *messagesVC = [[messagesViewController alloc] init];
     UINavigationController *messagesNavController = [[UINavigationController alloc] initWithRootViewController:messagesVC];
     messagesNavController.tabBarItem.title = @"Messages";
+    messagesNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
+    
     
     // Notifications View Controller / Nav controller
     notificationsViewController *notificationsVC = [[notificationsViewController alloc] init];
     UINavigationController *notificationsNavController = [[UINavigationController alloc] initWithRootViewController:notificationsVC];
     notificationsNavController.tabBarItem.title = @"Notifications";
+    notificationsNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
+    
     
     // More View Controller / Nav controller
     moreViewController *moreVC = [[moreViewController alloc] init];
     UINavigationController *moreNavController = [[UINavigationController alloc] initWithRootViewController:moreVC];
     moreNavController.tabBarItem.title = @"More";
+    moreNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
 
     
     // Configure the tab bar controller
@@ -63,6 +64,8 @@
     tabBarController.viewControllers = @[newsfeedNavController, requestNavController, messagesNavController, notificationsNavController, moreNavController];
     
     self.window.rootViewController = tabBarController;
+    
+    
     
     
     

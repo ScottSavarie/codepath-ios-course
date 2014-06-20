@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface newsFeedViewController : UIViewController
+@interface newsFeedViewController : UIViewController <UIScrollViewDelegate>
 
 @end

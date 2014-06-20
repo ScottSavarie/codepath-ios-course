@@ -9,6 +9,8 @@
 #import "loginViewController.h"
 #import "newsFeedViewController.h"
 
+
+
 @interface loginViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *loginFieldContainer;
@@ -54,7 +56,6 @@
     
     //disable btn
     self.loginButton.enabled = NO;
-    
     
 
     
@@ -198,6 +199,7 @@
     
     else {
         // dismiss login modal
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SecondViewControllerDismissed" object:nil userInfo:nil];
         [self dismissViewControllerAnimated:YES completion:nil];
         
     }
@@ -213,6 +215,7 @@
     [self performSelector:@selector(passwordCheck) withObject:nil afterDelay:2];
     [self.loginActivityIndicator startAnimating];
     self.loginButton.enabled = YES;
+
 }
 
 
