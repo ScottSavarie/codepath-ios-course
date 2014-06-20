@@ -57,6 +57,15 @@
     self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
 
     
+    // Add Icons to Nav bar
+    UIButton* searchBtn = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search"]];
+    UIBarButtonItem *searchBtnItem = [[UIBarButtonItem alloc] initWithCustomView:searchBtn];
+    self.navigationItem.leftBarButtonItem = searchBtnItem;
+    
+    UIButton* divebarBtn = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"divebar"]];
+    UIBarButtonItem *divebarBtnItem = [[UIBarButtonItem alloc] initWithCustomView:divebarBtn];
+    self.navigationItem.rightBarButtonItem = divebarBtnItem;
+    
 }
 
 - (void)didReceiveMemoryWarning

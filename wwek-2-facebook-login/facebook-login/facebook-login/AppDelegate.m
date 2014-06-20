@@ -28,6 +28,7 @@
     UINavigationController *newsfeedNavController = [[UINavigationController alloc] initWithRootViewController:newsFeedVC];
     newsfeedNavController.tabBarItem.title = @"NewsFeed";
     newsfeedNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
+    newsfeedNavController.tabBarItem.image = [UIImage imageNamed:@"newsfeed"];
     
     
     
@@ -36,28 +37,29 @@
     UINavigationController *requestNavController = [[UINavigationController alloc] initWithRootViewController:requestVC];
     requestNavController.tabBarItem.title = @"Requests";
     requestNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
-    
+    requestNavController.tabBarItem.image = [UIImage imageNamed:@"friend"];
     
     // Messages View Controller / Nav controller
     messagesViewController *messagesVC = [[messagesViewController alloc] init];
     UINavigationController *messagesNavController = [[UINavigationController alloc] initWithRootViewController:messagesVC];
     messagesNavController.tabBarItem.title = @"Messages";
     messagesNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
-    
+    messagesNavController.tabBarItem.image = [UIImage imageNamed:@"message"];
     
     // Notifications View Controller / Nav controller
     notificationsViewController *notificationsVC = [[notificationsViewController alloc] init];
     UINavigationController *notificationsNavController = [[UINavigationController alloc] initWithRootViewController:notificationsVC];
     notificationsNavController.tabBarItem.title = @"Notifications";
     notificationsNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
-    
+    notificationsNavController.tabBarItem.image = [UIImage imageNamed:@"notification"];
     
     // More View Controller / Nav controller
     moreViewController *moreVC = [[moreViewController alloc] init];
     UINavigationController *moreNavController = [[UINavigationController alloc] initWithRootViewController:moreVC];
     moreNavController.tabBarItem.title = @"More";
     moreNavController.navigationBar.barTintColor = [UIColor colorWithRed:(59/255.0) green:(89/255.0) blue:(152/255.0) alpha:1];
-
+    moreNavController.tabBarItem.image = [UIImage imageNamed:@"more"];
+    
     
     // Configure the tab bar controller
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
