@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newsFeedViewController">
             <connections>
                 <outlet property="newsFeedScroll" destination="Zqz-Rh-if9" id="I0C-AZ-JQG"/>
+                <outlet property="scrollViewFeedImg" destination="3J3-j5-92e" id="ycY-g6-Hmy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,16 +21,21 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" id="Zqz-Rh-if9">
-                    <rect key="frame" x="-20" y="66" width="360" height="1554"/>
+                    <rect key="frame" x="0.0" y="104" width="320" height="466"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="3J3-j5-92e">
-                            <rect key="frame" x="20" y="0.0" width="320" height="1554"/>
+                        <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="3J3-j5-92e">
+                            <rect key="frame" x="0.0" y="4" width="320" height="1557"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.98682683706283569" green="0.17499968409538269" blue="0.21668092906475067" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.98682683709999997" green="0.1749996841" blue="0.2166809291" alpha="0.0" colorSpace="calibratedRGB"/>
                 </scrollView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="composeBar" id="xMt-hf-ACU">
+                    <rect key="frame" x="0.0" y="61" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.86482728507638307" green="0.86794784747517051" blue="0.87730953467153283" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -37,6 +43,7 @@
         </view>
     </objects>
     <resources>
+        <image name="composeBar" width="320" height="45"/>
         <image name="feed" width="320" height="1505"/>
     </resources>
 </document>

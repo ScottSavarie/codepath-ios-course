@@ -12,6 +12,7 @@
 @interface newsFeedViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *newsFeedScroll;
+@property (weak, nonatomic) IBOutlet UIImageView *scrollViewFeedImg;
 
 
 -(void)newsFeedAnimation;
@@ -35,7 +36,7 @@
     [super viewDidLoad];
     
     // Set height of Newsfeed scroll
-    self.newsFeedScroll.contentSize = CGSizeMake(320, 1600);
+    self.newsFeedScroll.contentSize = CGSizeMake(320, 1614);
     self.newsFeedScroll.delegate = self;
     self.newsFeedScroll.alpha = 0;
     
@@ -76,7 +77,7 @@
 }
 
 
-// After Login Modal is Dimissed
+// Present Feed After Login Modal is Dimissed
 -(void)didDismissSecondViewController {
     [self performSelector:@selector(newsFeedAnimation) withObject:nil afterDelay:3];
 }
