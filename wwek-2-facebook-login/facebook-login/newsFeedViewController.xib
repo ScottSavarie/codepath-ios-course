@@ -25,9 +25,20 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="3J3-j5-92e">
-                            <rect key="frame" x="0.0" y="4" width="320" height="1557"/>
+                            <rect key="frame" x="0.0" y="4" width="320" height="1500"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wq3-Ul-Wnq">
+                            <rect key="frame" x="12" y="900" width="296" height="249"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onArronTap:" destination="-1" eventType="touchUpInside" id="yI3-Gh-mSP"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.98682683706283569" green="0.17499968409538269" blue="0.21668092906475067" alpha="0.0" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.98682683709999997" green="0.1749996841" blue="0.2166809291" alpha="0.0" colorSpace="calibratedRGB"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E253EAE1956498D00F05F57 /* profileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E253EAC1956498D00F05F57 /* profileViewController.m */; };
+		5E253EAF1956498D00F05F57 /* profileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E253EAD1956498D00F05F57 /* profileViewController.xib */; };
 		5EA2C91519521BC800EE9B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91419521BC800EE9B25 /* Foundation.framework */; };
 		5EA2C91719521BC800EE9B25 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91619521BC800EE9B25 /* CoreGraphics.framework */; };
 		5EA2C91919521BC800EE9B25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA2C91819521BC800EE9B25 /* UIKit.framework */; };
@@ -44,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E253EAB1956498D00F05F57 /* profileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewController.h; sourceTree = "<group>"; };
+		5E253EAC1956498D00F05F57 /* profileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewController.m; sourceTree = "<group>"; };
+		5E253EAD1956498D00F05F57 /* profileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = profileViewController.xib; sourceTree = "<group>"; };
 		5EA2C91119521BC800EE9B25 /* facebook-login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "facebook-login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA2C91419521BC800EE9B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EA2C91619521BC800EE9B25 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,6 +201,9 @@
 				5EA2C95D19521CCE00EE9B25 /* messagesViewController.h */,
 				5EA2C95E19521CCE00EE9B25 /* messagesViewController.m */,
 				5EA2C95F19521CCE00EE9B25 /* messagesViewController.xib */,
+				5E253EAB1956498D00F05F57 /* profileViewController.h */,
+				5E253EAC1956498D00F05F57 /* profileViewController.m */,
+				5E253EAD1956498D00F05F57 /* profileViewController.xib */,
 			);
 			name = viewControllers;
 			path = ..;
@@ -284,6 +292,7 @@
 				5EA2C95619521C6C00EE9B25 /* notificationsViewController.xib in Resources */,
 				5EA2C92719521BC800EE9B25 /* Images.xcassets in Resources */,
 				5EA2C94719521C1300EE9B25 /* newsFeedViewController.xib in Resources */,
+				5E253EAF1956498D00F05F57 /* profileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +316,7 @@
 				5EA2C96019521CCE00EE9B25 /* messagesViewController.m in Sources */,
 				5EA2C95519521C6C00EE9B25 /* notificationsViewController.m in Sources */,
 				5EA2C92519521BC800EE9B25 /* AppDelegate.m in Sources */,
+				5E253EAE1956498D00F05F57 /* profileViewController.m in Sources */,
 				5EA2C94619521C1300EE9B25 /* newsFeedViewController.m in Sources */,
 				5EA2C95019521C5900EE9B25 /* requestsViewController.m in Sources */,
 				5EA2C92119521BC800EE9B25 /* main.m in Sources */,
@@ -506,6 +516,7 @@
 				5EA2C93F19521BC800EE9B25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EA2C94019521BC800EE9B25 /* Build configuration list for PBXNativeTarget "facebook-loginTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +525,7 @@
 				5EA2C94219521BC800EE9B25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,12 +8,14 @@
 
 #import "newsFeedViewController.h"
 #import "loginViewController.h"
+#import "profileViewController.h"
 
 @interface newsFeedViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *newsFeedScroll;
 @property (weak, nonatomic) IBOutlet UIImageView *scrollViewFeedImg;
 
+- (IBAction)onArronTap:(id)sender;
 
 -(void)newsFeedAnimation;
 
@@ -50,12 +52,16 @@
     [self presentViewController:vc animated:NO completion:nil];
 
     
-    // Title of News
+    // Title color
     UIColor *white = [UIColor whiteColor];
     NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
     [navBarTextAttributes setObject:white forKey:NSForegroundColorAttributeName ];
     self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
 
+    // Back button tints
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+    
     
     // Add Icons to Nav bar
     UIButton* searchBtn = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search"]];
@@ -68,6 +74,7 @@
     
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -78,6 +85,7 @@
 
 
 // Show News Feed after 2 seconds
+
 
 -(void)newsFeedAnimation{
     [UIView animateWithDuration:.3 animations:^{
@@ -91,6 +99,16 @@
     [self performSelector:@selector(newsFeedAnimation) withObject:nil afterDelay:3];
 }
 
+
+
+// Go To Aaron's Profile
+
+
+- (IBAction)onArronTap:(id)sender {
+    
+    profileViewController *vc = [[profileViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

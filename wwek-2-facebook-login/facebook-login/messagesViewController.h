@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface messagesViewController : UIViewController
+@interface messagesViewController : UIViewController <UIScrollViewDelegate>
 
 @end
