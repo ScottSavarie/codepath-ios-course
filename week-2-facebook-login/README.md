@@ -6,4 +6,4 @@
 
 
 ### GIF
-![Newsfeed](facebook-login.gif)
+![Newsfeed](facebookLogin.gif)
