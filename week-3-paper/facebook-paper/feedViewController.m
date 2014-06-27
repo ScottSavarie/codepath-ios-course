@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *appView;
 
+
 - (IBAction)onHeadlinePan:(id)sender;
 
 
@@ -49,46 +50,46 @@
 }
 
 - (IBAction)onHeadlinePan:(id)sender {
-    
+    // Get velocity
     CGPoint velocity = [self.headlinePanRecognizer velocityInView:self.view];
-
+    
     if (self.headlinePanRecognizer.state == UIGestureRecognizerStateBegan) {
-
-
     }
     
+    // if panning
     else if (self.headlinePanRecognizer.state == UIGestureRecognizerStateChanged) {
-        
         CGPoint translation = [self.headlinePanRecognizer translationInView:self.view];
-        self.headlineView.center = CGPointMake(self.headlineView.center.x, self.headlineView.center.y + translation.y);
-        [self.headlinePanRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
-
+        
+        // if view is less than 0 and panning up add tension
+        if (self.headlineView.frame.origin.y < 0  && velocity.y <0){
+            CGPoint translation = [self.headlinePanRecognizer translationInView:self.view];
+            self.headlineView.center = CGPointMake(self.headlineView.center.x,self.headlineView.center.y + translation.y / 6);
+            [self.headlinePanRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+        }
+        
+        else {
+            self.headlineView.center = CGPointMake(self.headlineView.center.x, self.headlineView.center.y + translation.y);
+            [self.headlinePanRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+        }
     }
     
-    
+
+    // if panning has ended
     else if (self.headlinePanRecognizer.state == UIGestureRecognizerStateEnded) {
-    
-        // went down
+        
+        // and view was going down
         if (velocity.y > 0){
-            
-            
             [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:1 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 self.headlineView.center = CGPointMake(self.headlineView.center.x, 760);
             } completion:nil];
-            
-
-            
         }
         
-        // went up
+        // and view was going up
         else if (velocity.y < 0){
-            
             [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:1 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 self.headlineView.center = CGPointMake(self.headlineView.center.x, self.appView.center.y);
             } completion:nil];
-            
         }
-        
     }
 
     
