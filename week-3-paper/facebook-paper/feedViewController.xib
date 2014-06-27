@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="feedViewController">
             <connections>
+                <outlet property="appView" destination="i5M-Pr-FkT" id="kYJ-Tl-9Mi"/>
+                <outlet property="headlinePanRecognizer" destination="6qU-NM-ZNO" id="B53-JF-1j5"/>
+                <outlet property="headlineView" destination="1bU-LU-Pzx" id="CWI-zI-a9m"/>
                 <outlet property="newsFeedScroll" destination="UPz-p1-Kmn" id="qlD-dU-G8b"/>
                 <outlet property="searchDisplayController" destination="e4N-JL-mf6" id="mZM-ZA-PcD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -92,6 +95,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headlines" id="mll-PJ-lWs">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <gestureRecognizers/>
                         </imageView>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="UPz-p1-Kmn">
                             <rect key="frame" x="0.0" y="302" width="320" height="266"/>
@@ -105,7 +109,11 @@
                         </scrollView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="6qU-NM-ZNO" appends="YES" id="nJF-YN-ERU"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -128,6 +136,11 @@
                 <outlet property="searchResultsDelegate" destination="-1" id="Hdi-8s-MTK"/>
             </connections>
         </searchDisplayController>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="6qU-NM-ZNO">
+            <connections>
+                <action selector="onHeadlinePan:" destination="-1" id="1M0-2E-Rax"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="feed" width="1444" height="253"/>
