@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface feedViewController : UIViewController <UIScrollViewDelegate>
+@interface feedViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end

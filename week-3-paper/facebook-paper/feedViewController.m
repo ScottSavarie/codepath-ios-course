@@ -12,12 +12,14 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *newsFeedScroll;
 @property (weak, nonatomic) IBOutlet UIView *headlineView;
 @property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *headlinePanRecognizer;
+@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *newsfeedPanRecognizer;
 
 @property (strong, nonatomic) IBOutlet UIView *appView;
 
 
 - (IBAction)onHeadlinePan:(id)sender;
 
+- (IBAction)onNewsfeedPan:(id)sender;
 
 
 @end
@@ -39,7 +41,9 @@
 
     // Set scroll view size
     self.newsFeedScroll.contentSize = CGSizeMake(1445, 266);
-    self.newsFeedScroll.delegate = self;
+//    self.newsFeedScroll.delegate = self;
+    
+    self.newsfeedPanRecognizer.delegate = self;
 
 }
 
@@ -98,4 +102,55 @@
     
     
 }
+
+- (IBAction)onNewsfeedPan:(id)sender {
+    CGPoint velocity = [self.newsfeedPanRecognizer velocityInView:self.view];
+    
+    if (self.headlinePanRecognizer.state == UIGestureRecognizerStateBegan) {
+    }
+    
+    else if (self.headlinePanRecognizer.state == UIGestureRecognizerStateChanged) {
+        NSLog(@"is panning");
+        
+        
+        CGPoint translation = [self.newsfeedPanRecognizer translationInView:self.view];
+        self.newsFeedScroll.frame = CGRectMake(0, self.newsFeedScroll.frame.origin.y + (translation.y /40), self.newsFeedScroll.frame.size.width, self.newsFeedScroll.frame.size.height);
+        
+        self.newsFeedScroll.transform = CGAffineTransformMakeScale(1 + -translation.y/80, 1+ -translation.y /80);
+        [self.headlinePanRecognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+        
+    }
+    
+    
+    else if (self.headlinePanRecognizer.state == UIGestureRecognizerStateEnded) {
+        
+        if (velocity.y < 0){
+            
+            [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:1 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                  self.newsFeedScroll.frame = CGRectMake(0, 0, 320, 568);
+//                self.newsFeedScroll.contentSize = CGSizeMake(3132, 568);
+                  self.newsFeedScroll.transform = CGAffineTransformMakeScale(1.95, 1.95);
+
+
+
+            } completion:nil];
+            
+
+        }
+        
+        
+    }
+    
+    
+
+
+}
+
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+
 @end

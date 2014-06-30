@@ -10,6 +10,7 @@
                 <outlet property="headlinePanRecognizer" destination="6qU-NM-ZNO" id="B53-JF-1j5"/>
                 <outlet property="headlineView" destination="1bU-LU-Pzx" id="CWI-zI-a9m"/>
                 <outlet property="newsFeedScroll" destination="UPz-p1-Kmn" id="qlD-dU-G8b"/>
+                <outlet property="newsfeedPanRecognizer" destination="VNm-PN-nlN" id="TdY-Ib-7li"/>
                 <outlet property="searchDisplayController" destination="e4N-JL-mf6" id="mZM-ZA-PcD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -106,6 +107,10 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
                             </subviews>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="VNm-PN-nlN" appends="YES" id="NkC-PQ-0c3"/>
+                            </connections>
                         </scrollView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -139,6 +144,11 @@
         <panGestureRecognizer minimumNumberOfTouches="1" id="6qU-NM-ZNO">
             <connections>
                 <action selector="onHeadlinePan:" destination="-1" id="1M0-2E-Rax"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="VNm-PN-nlN">
+            <connections>
+                <action selector="onNewsfeedPan:" destination="-1" id="eUr-TA-qml"/>
             </connections>
         </panGestureRecognizer>
     </objects>
