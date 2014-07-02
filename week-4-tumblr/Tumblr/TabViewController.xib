@@ -6,7 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabViewController">
             <connections>
+                <outlet property="accountButton" destination="6Ks-Pp-jle" id="Cay-4k-7cZ"/>
+                <outlet property="activityButton" destination="Wjb-GF-EJc" id="6Ld-I1-BsO"/>
                 <outlet property="contentView" destination="j1C-hR-q60" id="iru-3V-pgo"/>
+                <outlet property="dashButton" destination="Axb-rk-Oia" id="7ec-hV-Eme"/>
+                <outlet property="postButton" destination="Lz3-FY-DkT" id="tRb-2n-vGY"/>
+                <outlet property="searchButton" destination="BOQ-id-AY4" id="D3e-bU-TC5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,32 +29,34 @@
                     <rect key="frame" x="0.0" y="512" width="320" height="56"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-rk-Oia">
-                            <rect key="frame" x="13" y="13" width="36" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-rk-Oia">
+                            <rect key="frame" x="12" y="10" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Dash">
+                            <state key="normal" image="home">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" image="home_selected"/>
                             <connections>
                                 <action selector="onDashButton:" destination="-1" eventType="touchUpInside" id="ihp-ei-tV6"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-id-AY4">
-                            <rect key="frame" x="67" y="13" width="48" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-id-AY4">
+                            <rect key="frame" x="71" y="10" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Search">
+                            <state key="normal" image="search">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" image="search_selected"/>
                             <connections>
                                 <action selector="onSearchButton:" destination="-1" eventType="touchUpInside" id="Tk1-2f-R6p"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz3-FY-DkT">
-                            <rect key="frame" x="137" y="13" width="32" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz3-FY-DkT">
+                            <rect key="frame" x="131" y="10" width="58" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Post">
+                            <state key="normal" image="post">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -57,35 +64,47 @@
                                 <action selector="onPostButton:" destination="-1" eventType="touchUpInside" id="Dtr-yq-IRG"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-Pp-jle">
-                            <rect key="frame" x="188" y="13" width="57" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-Pp-jle">
+                            <rect key="frame" x="215" y="10" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Account">
+                            <state key="normal" image="account">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" image="account_selected"/>
                             <connections>
                                 <action selector="onAccountButton:" destination="-1" eventType="touchUpInside" id="2JW-qa-RIx"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjb-GF-EJc">
-                            <rect key="frame" x="261" y="13" width="51" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjb-GF-EJc">
+                            <rect key="frame" x="274" y="10" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Activity">
+                            <state key="normal" image="activity">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" image="account_selected"/>
                             <connections>
                                 <action selector="onActivityButton:" destination="-1" eventType="touchUpInside" id="WAb-tZ-GJs"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.26510906975958126" green="0.35347148701674769" blue="0.52345742984693877" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.31580533060940219" green="0.41101668534813318" blue="0.53267563868613144" alpha="1" colorSpace="deviceRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.12519899316005942" green="0.31166614897742351" blue="0.5611049107142857" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.26000437799999998" green="0.33839244390000001" blue="0.43855497259999998" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="account" width="35" height="35"/>
+        <image name="account_selected" width="35" height="35"/>
+        <image name="activity" width="35" height="35"/>
+        <image name="home" width="35" height="35"/>
+        <image name="home_selected" width="35" height="35"/>
+        <image name="post" width="50" height="35"/>
+        <image name="search" width="35" height="35"/>
+        <image name="search_selected" width="35" height="35"/>
+    </resources>
 </document>
