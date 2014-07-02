@@ -27,13 +27,12 @@
 {
     [super viewDidLoad];
     
-    // Set Navigation Title
-    
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lightening"]];
-    //        self.DashboardNavigationController.title = @"Tumblr.";
-
-    
+    // Setup Navigation    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tumblr"]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log in" style:UIBarButtonItemStylePlain target:self action:@selector(onLoginButton)];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     [self setNeedsStatusBarAppearanceUpdate];
+
     
 }
 
@@ -46,6 +45,10 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+- (void) onLoginButton{
+
 }
 
 @end

@@ -61,11 +61,11 @@
         
 
         self.DashboardNavigationController = [[UINavigationController alloc] initWithRootViewController:self.DashboardViewController];
-        self.DashboardNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(70/255.0) green:(84/255.0) blue:(105/255.0) alpha:1];
+        self.DashboardNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(35/255.0) green:(49/255.0) blue:(70/255.0) alpha:1];
+
 
         self.ActivityNavigationController = [[UINavigationController alloc] initWithRootViewController:self.ActivityViewController];
-        self.ActivityNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(70/255.0) green:(84/255.0) blue:(105/255.0) alpha:1];
-
+        self.ActivityNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(35/255.0) green:(49/255.0) blue:(70/255.0) alpha:1];
 
         
     }
@@ -101,7 +101,6 @@
     self.postButton.selected = NO;
     self.accountButton.selected = NO;
     self.activityButton.selected = NO;
-
     self.DashboardNavigationController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.DashboardNavigationController.view];
     [self preferredStatusBarStyle];
