@@ -27,6 +27,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    // Set Nav Title
+    
+    self.navigationItem.title = @"Activity";
+    UIColor *white = [UIColor whiteColor];
+    NSMutableDictionary *navBarTextAttributes = [NSMutableDictionary dictionaryWithCapacity:1];
+    [navBarTextAttributes setObject:white forKey:NSForegroundColorAttributeName ];
+    self.navigationController.navigationBar.titleTextAttributes = navBarTextAttributes;
 }
 
 - (void)didReceiveMemoryWarning

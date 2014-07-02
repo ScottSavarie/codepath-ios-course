@@ -52,16 +52,20 @@
     if (self) {
         // Custom initialization
         
-        
-        // Init View Controllers
+        // Init View / Nav Controllers
         self.DashboardViewController = [[DashboardViewController alloc] init];
         self.SearchViewController = [[SearchViewController alloc] init];
         self.PostViewController = [[PostViewController alloc] init];
         self.AccountViewController = [[AccountViewController alloc] init];
         self.ActivityViewController = [[ActivityViewController alloc] init];
         
+
         self.DashboardNavigationController = [[UINavigationController alloc] initWithRootViewController:self.DashboardViewController];
+        self.DashboardNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(70/255.0) green:(84/255.0) blue:(105/255.0) alpha:1];
+
         self.ActivityNavigationController = [[UINavigationController alloc] initWithRootViewController:self.ActivityViewController];
+        self.ActivityNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(70/255.0) green:(84/255.0) blue:(105/255.0) alpha:1];
+
 
         
     }

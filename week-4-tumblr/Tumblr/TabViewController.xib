@@ -83,16 +83,16 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="selected" image="account_selected"/>
+                            <state key="selected" image="activity_selected"/>
                             <connections>
                                 <action selector="onActivityButton:" destination="-1" eventType="touchUpInside" id="WAb-tZ-GJs"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.31580533060940219" green="0.41101668534813318" blue="0.53267563868613144" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="0.2747" green="0.33107500000000006" blue="0.41000000000000003" alpha="1" colorSpace="deviceRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.26000437799999998" green="0.33839244390000001" blue="0.43855497259999998" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.26400000000000001" green="0.34906666669999997" blue="0.44" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
@@ -101,6 +101,7 @@
         <image name="account" width="35" height="35"/>
         <image name="account_selected" width="35" height="35"/>
         <image name="activity" width="35" height="35"/>
+        <image name="activity_selected" width="35" height="35"/>
         <image name="home" width="35" height="35"/>
         <image name="home_selected" width="35" height="35"/>
         <image name="post" width="50" height="35"/>

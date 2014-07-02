@@ -28,10 +28,10 @@
                 <view contentMode="scaleToFill" id="jF2-MI-BAj">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.26000437799999998" green="0.33839244390000001" blue="0.43855497259999998" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="0.26400000000000001" green="0.34906666669999997" blue="0.44" alpha="1" colorSpace="deviceRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.2600043780180355" green="0.338392443944246" blue="0.43855497262773724" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.26400000000000001" green="0.34906666669999997" blue="0.44" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

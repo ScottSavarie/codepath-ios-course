@@ -27,6 +27,12 @@
 {
     [super viewDidLoad];
     
+    // Set Navigation Title
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lightening"]];
+    //        self.DashboardNavigationController.title = @"Tumblr.";
+
+    
     [self setNeedsStatusBarAppearanceUpdate];
     
 }
