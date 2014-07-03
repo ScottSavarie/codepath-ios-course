@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *dashboardScrollView;
 @property (weak, nonatomic) IBOutlet UIView *loginViewContainer;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UIView *overlay;
 
 - (IBAction)onCancelButton:(id)sender;
 @end
@@ -38,11 +39,18 @@
     
     [self setNeedsStatusBarAppearanceUpdate];
 
+
+    // Setup Overlay
+    self.overlay.alpha = (0);
+    [self.navigationController.view addSubview:self.overlay];
     
-    // Set up Login Form
+    
+    // Setup Login Form
     self.loginViewContainer.layer.cornerRadius = 2;
     self.loginViewContainer.center = CGPointMake(self.loginViewContainer.center.x, 300);
     self.loginViewContainer.alpha = (0);
+    
+
     
 }
 
@@ -62,8 +70,7 @@
     [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.loginViewContainer.center = CGPointMake(self.loginViewContainer.center.x, 200);
         self.loginViewContainer.alpha = (1);
-        self.dashboardScrollView.alpha = (0.1);
-        self.navigationController.navigationBar.alpha = (0.1);
+        self.overlay.alpha = (0.9);
     } completion:nil];
     
     [self.emailTextField becomeFirstResponder];
@@ -76,11 +83,9 @@
     [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.loginViewContainer.center = CGPointMake(self.loginViewContainer.center.x, 300);
         self.loginViewContainer.alpha = (0);
-        self.dashboardScrollView.alpha = (1);
-        self.navigationController.navigationBar.alpha = (1);
+        self.overlay.alpha = (0);
     } completion:nil];
-    
-    [self.view endEditing:YES];
+    [self.navigationController.view endEditing:YES];
     
     
 }

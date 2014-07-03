@@ -13,6 +13,9 @@
 #import "AccountViewController.h"
 #import "ActivityViewController.h"
 
+#define RADIANS(degrees) ((degrees * M_PI) / 180.0)
+
+
 @interface TabViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *contentView;
@@ -32,6 +35,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *accountButton;
 @property (weak, nonatomic) IBOutlet UIButton *activityButton;
 
+@property (weak, nonatomic) IBOutlet UIView *tooltipContainer;
+@property (weak, nonatomic) IBOutlet UILabel *tooltipTextLabel;
+@property (weak, nonatomic) IBOutlet UIView *tooltipSquare;
 
 
 
@@ -59,16 +65,11 @@
         self.AccountViewController = [[AccountViewController alloc] init];
         self.ActivityViewController = [[ActivityViewController alloc] init];
         
-        
-        
-        
-
         self.DashboardNavigationController = [[UINavigationController alloc] initWithRootViewController:self.DashboardViewController];
         self.DashboardNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(35/255.0) green:(49/255.0) blue:(70/255.0) alpha:1];
 
         self.ActivityNavigationController = [[UINavigationController alloc] initWithRootViewController:self.ActivityViewController];
         self.ActivityNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(35/255.0) green:(49/255.0) blue:(70/255.0) alpha:1];
-
         
     }
     return self;
@@ -82,9 +83,16 @@
 
     
     
-    // Invoke Dash Button
+    // Invoke Dashboard Button
     [self onDashButton:nil];
     self.dashButton.selected = YES;
+
+    
+    //Setup tool tip
+    self.tooltipTextLabel.layer.cornerRadius = 3;
+    
+    [self performSelector:@selector(toolTipBounce) withObject:nil afterDelay:0.1f];
+    
 
     
 }
@@ -97,6 +105,14 @@
 
 
 
+- (void)toolTipBounce{
+    [UIView animateWithDuration:0.8 delay:0 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatAutoreverses:YES];
+        self.tooltipContainer.center = CGPointMake(self.tooltipContainer.center.x, 480);
+    } completion:nil];
+
+}
+
 - (IBAction)onDashButton:(id)sender{
     self.dashButton.selected = YES;
     self.searchButton.selected = NO;
@@ -106,6 +122,7 @@
     self.DashboardNavigationController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.DashboardNavigationController.view];
     [self preferredStatusBarStyle];
+
     
 }
 
@@ -119,6 +136,7 @@
     self.activityButton.selected = NO;
     self.SearchViewController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.SearchViewController.view];
+    
 
 
 }

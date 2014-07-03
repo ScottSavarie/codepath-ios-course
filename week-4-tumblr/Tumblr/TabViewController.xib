@@ -12,6 +12,8 @@
                 <outlet property="dashButton" destination="Axb-rk-Oia" id="7ec-hV-Eme"/>
                 <outlet property="postButton" destination="Lz3-FY-DkT" id="tRb-2n-vGY"/>
                 <outlet property="searchButton" destination="BOQ-id-AY4" id="D3e-bU-TC5"/>
+                <outlet property="tooltipContainer" destination="lae-Wa-m9a" id="E2E-e9-Ofa"/>
+                <outlet property="tooltipTextLabel" destination="Ctq-Mm-5e3" id="XqC-Cv-ZHh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -91,6 +93,25 @@
                     </subviews>
                     <color key="backgroundColor" red="0.2747" green="0.33107500000000006" blue="0.41000000000000003" alpha="1" colorSpace="deviceRGB"/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lae-Wa-m9a" userLabel="TooltipWrapper">
+                    <rect key="frame" x="0.0" y="436" width="180" height="72"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use the Explore tab to find blogs to follow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="156" translatesAutoresizingMaskIntoConstraints="NO" id="Ctq-Mm-5e3">
+                            <rect key="frame" x="11" y="20" width="156" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.13940927933673475" green="0.13940927933673475" blue="0.13940927933673475" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tip" translatesAutoresizingMaskIntoConstraints="NO" id="Mte-l9-ecl">
+                            <rect key="frame" x="74" y="60" width="25" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.26400000000000001" green="0.34906666669999997" blue="0.44" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -107,5 +128,6 @@
         <image name="post" width="50" height="35"/>
         <image name="search" width="35" height="35"/>
         <image name="search_selected" width="35" height="35"/>
+        <image name="tip" width="25" height="13"/>
     </resources>
 </document>
