@@ -34,10 +34,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *postButton;
 @property (weak, nonatomic) IBOutlet UIButton *accountButton;
 @property (weak, nonatomic) IBOutlet UIButton *activityButton;
+@property (weak, nonatomic) IBOutlet UIButton *nevermindButton;
 
 @property (weak, nonatomic) IBOutlet UIView *tooltipContainer;
 @property (weak, nonatomic) IBOutlet UILabel *tooltipTextLabel;
-@property (weak, nonatomic) IBOutlet UIView *tooltipSquare;
+@property (weak, nonatomic) IBOutlet UIView *postOverlay;
+@property (weak, nonatomic) IBOutlet UIView *textPostContainer;
 
 
 
@@ -46,6 +48,7 @@
 - (IBAction)onPostButton:(id)sender;
 - (IBAction)onAccountButton:(id)sender;
 - (IBAction)onActivityButton:(id)sender;
+- (IBAction)onNevermindButton:(id)sender;
 
 
 @end
@@ -90,10 +93,16 @@
     
     //Setup tool tip
     self.tooltipTextLabel.layer.cornerRadius = 3;
-    
     [self performSelector:@selector(toolTipBounce) withObject:nil afterDelay:0.1f];
     
-
+    
+    // Overlay and Button setup
+    
+    self.postOverlay.alpha = (0);
+    self.textPostContainer.alpha = (0);
+    self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 800);
+    self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 800);
+    self.nevermindButton.alpha = (0);
     
 }
 
@@ -106,6 +115,7 @@
 
 
 - (void)toolTipBounce{
+    self.tooltipContainer.alpha = (1);
     [UIView animateWithDuration:0.8 delay:0 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionRepeat animations:^{
         [UIView setAnimationRepeatAutoreverses:YES];
         self.tooltipContainer.center = CGPointMake(self.tooltipContainer.center.x, 480);
@@ -122,6 +132,8 @@
     self.DashboardNavigationController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.DashboardNavigationController.view];
     [self preferredStatusBarStyle];
+    
+    [self toolTipBounce];
 
     
 }
@@ -137,7 +149,7 @@
     self.SearchViewController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.SearchViewController.view];
     
-
+    self.tooltipContainer.alpha = (0);
 
 }
 
@@ -149,8 +161,18 @@
     self.postButton.selected = YES;
     self.accountButton.selected = NO;
     self.activityButton.selected = NO;
-    self.PostViewController.view.frame = self.contentView.frame;
-    [self.contentView addSubview:self.PostViewController.view];
+    [self toolTipBounce];
+    
+    
+    [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.postOverlay.alpha = (0.8);
+        self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 200);
+        self.textPostContainer.alpha = (1);
+        self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 523);
+        self.nevermindButton.alpha = (1);
+
+    } completion:nil];
+
 
 }
 
@@ -165,6 +187,8 @@
     self.AccountViewController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.AccountViewController.view];
 
+    [self toolTipBounce];
+
 }
 
 
@@ -177,6 +201,24 @@
     self.activityButton.selected = YES;
     self.ActivityNavigationController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.ActivityNavigationController.view];
+
+    [self toolTipBounce];
+
+
+}
+
+- (IBAction)onNevermindButton:(id)sender {
+    
+    [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.postOverlay.alpha = (0);
+        self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 500);
+        self.textPostContainer.alpha = (0);
+        self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 800);
+        self.nevermindButton.alpha = (0);
+
+    } completion:nil];
+    
+    
 }
 
 

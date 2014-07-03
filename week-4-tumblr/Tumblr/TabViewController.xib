@@ -10,8 +10,11 @@
                 <outlet property="activityButton" destination="Wjb-GF-EJc" id="6Ld-I1-BsO"/>
                 <outlet property="contentView" destination="j1C-hR-q60" id="iru-3V-pgo"/>
                 <outlet property="dashButton" destination="Axb-rk-Oia" id="7ec-hV-Eme"/>
+                <outlet property="nevermindButton" destination="ElK-4i-CpX" id="t5v-ww-Gze"/>
                 <outlet property="postButton" destination="Lz3-FY-DkT" id="tRb-2n-vGY"/>
+                <outlet property="postOverlay" destination="30z-Bm-Ui9" id="Nwi-Ol-hnO"/>
                 <outlet property="searchButton" destination="BOQ-id-AY4" id="D3e-bU-TC5"/>
+                <outlet property="textPostContainer" destination="lqa-fr-Rdg" id="owp-b9-CZr"/>
                 <outlet property="tooltipContainer" destination="lae-Wa-m9a" id="E2E-e9-Ofa"/>
                 <outlet property="tooltipTextLabel" destination="Ctq-Mm-5e3" id="XqC-Cv-ZHh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -112,6 +115,42 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30z-Bm-Ui9" userLabel="overlay">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.090900240385358932" green="0.12074873845976415" blue="0.1646205357142857" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lqa-fr-Rdg" userLabel="textPostContainer">
+                    <rect key="frame" x="111" y="188" width="98" height="125"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text-post" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-Qs-Z2z">
+                            <rect key="frame" x="12" y="8" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-VX-fcO">
+                            <rect key="frame" x="33" y="96" width="32" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElK-4i-CpX">
+                    <rect key="frame" x="0.0" y="523" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="0.11" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Nevermind">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onNevermindButton:" destination="-1" eventType="touchUpInside" id="iv4-0y-fPX"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.26400000000000001" green="0.34906666669999997" blue="0.44" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -128,6 +167,7 @@
         <image name="post" width="50" height="35"/>
         <image name="search" width="35" height="35"/>
         <image name="search_selected" width="35" height="35"/>
+        <image name="text-post" width="74" height="74"/>
         <image name="tip" width="25" height="13"/>
     </resources>
 </document>
