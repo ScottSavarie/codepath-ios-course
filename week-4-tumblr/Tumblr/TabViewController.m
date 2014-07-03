@@ -59,10 +59,12 @@
         self.AccountViewController = [[AccountViewController alloc] init];
         self.ActivityViewController = [[ActivityViewController alloc] init];
         
+        
+        
+        
 
         self.DashboardNavigationController = [[UINavigationController alloc] initWithRootViewController:self.DashboardViewController];
         self.DashboardNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(35/255.0) green:(49/255.0) blue:(70/255.0) alpha:1];
-
 
         self.ActivityNavigationController = [[UINavigationController alloc] initWithRootViewController:self.ActivityViewController];
         self.ActivityNavigationController.navigationBar.barTintColor = [UIColor colorWithRed:(35/255.0) green:(49/255.0) blue:(70/255.0) alpha:1];
