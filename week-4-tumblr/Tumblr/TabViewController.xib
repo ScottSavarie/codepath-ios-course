@@ -10,13 +10,18 @@
                 <outlet property="activityButton" destination="Wjb-GF-EJc" id="6Ld-I1-BsO"/>
                 <outlet property="contentView" destination="j1C-hR-q60" id="iru-3V-pgo"/>
                 <outlet property="dashButton" destination="Axb-rk-Oia" id="7ec-hV-Eme"/>
+                <outlet property="hiPostContainer" destination="h8h-iw-cZe" id="GzO-Ap-lt0"/>
+                <outlet property="linkPostContainer" destination="cvN-yL-dq8" id="MJe-Cg-SaK"/>
                 <outlet property="nevermindButton" destination="ElK-4i-CpX" id="t5v-ww-Gze"/>
+                <outlet property="photoPostContainer" destination="p6f-rA-jUN" id="yGH-pA-mbE"/>
                 <outlet property="postButton" destination="Lz3-FY-DkT" id="tRb-2n-vGY"/>
                 <outlet property="postOverlay" destination="30z-Bm-Ui9" id="Nwi-Ol-hnO"/>
+                <outlet property="quotePostContainer" destination="aQh-Dj-JPq" id="E3s-xs-ulX"/>
                 <outlet property="searchButton" destination="BOQ-id-AY4" id="D3e-bU-TC5"/>
                 <outlet property="textPostContainer" destination="lqa-fr-Rdg" id="owp-b9-CZr"/>
                 <outlet property="tooltipContainer" destination="lae-Wa-m9a" id="E2E-e9-Ofa"/>
                 <outlet property="tooltipTextLabel" destination="Ctq-Mm-5e3" id="XqC-Cv-ZHh"/>
+                <outlet property="videoPostContainer" destination="JmE-mx-jhY" id="kS2-rI-BaD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -121,15 +126,105 @@
                     <color key="backgroundColor" red="0.090900240385358932" green="0.12074873845976415" blue="0.1646205357142857" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lqa-fr-Rdg" userLabel="textPostContainer">
-                    <rect key="frame" x="111" y="188" width="98" height="125"/>
+                    <rect key="frame" x="10" y="150" width="98" height="125"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="text-post" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-Qs-Z2z">
                             <rect key="frame" x="12" y="8" width="74" height="74"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-VX-fcO">
-                            <rect key="frame" x="33" y="96" width="32" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-VX-fcO">
+                            <rect key="frame" x="12" y="90" width="74" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6f-rA-jUN" userLabel="photoPostContainer">
+                    <rect key="frame" x="110" y="150" width="98" height="125"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo-post" translatesAutoresizingMaskIntoConstraints="NO" id="xCf-5E-pE4">
+                            <rect key="frame" x="12" y="8" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-HT-aBR">
+                            <rect key="frame" x="0.0" y="90" width="98" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-Dj-JPq" userLabel="quotePostContainer">
+                    <rect key="frame" x="212" y="150" width="98" height="125"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quote-post" translatesAutoresizingMaskIntoConstraints="NO" id="DM4-29-KVC">
+                            <rect key="frame" x="12" y="8" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PH-wz-3u3">
+                            <rect key="frame" x="0.0" y="90" width="98" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmE-mx-jhY" userLabel="videoPostContainer">
+                    <rect key="frame" x="212" y="280" width="98" height="125"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video-post" translatesAutoresizingMaskIntoConstraints="NO" id="0f2-TU-JfS">
+                            <rect key="frame" x="12" y="8" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yft-yt-FjS">
+                            <rect key="frame" x="0.0" y="90" width="98" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8h-iw-cZe" userLabel="hiPostContainer">
+                    <rect key="frame" x="111" y="280" width="98" height="125"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hi-post" translatesAutoresizingMaskIntoConstraints="NO" id="nt1-ER-2u0">
+                            <rect key="frame" x="12" y="8" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-Vs-6yJ">
+                            <rect key="frame" x="0.0" y="90" width="98" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvN-yL-dq8" userLabel="linkPostContainer">
+                    <rect key="frame" x="10" y="280" width="98" height="125"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="link-post" translatesAutoresizingMaskIntoConstraints="NO" id="d98-W9-0J8">
+                            <rect key="frame" x="12" y="8" width="74" height="74"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loz-11-LdV">
+                            <rect key="frame" x="12" y="90" width="74" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,12 +234,12 @@
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElK-4i-CpX">
-                    <rect key="frame" x="0.0" y="523" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="512" width="320" height="56"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="0.11" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.240209493" green="0.31262964879999999" blue="0.40516651460000003" alpha="1" colorSpace="deviceRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="Nevermind">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="1" alpha="0.89000000000000001" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -162,12 +257,17 @@
         <image name="account_selected" width="35" height="35"/>
         <image name="activity" width="35" height="35"/>
         <image name="activity_selected" width="35" height="35"/>
+        <image name="hi-post" width="74" height="74"/>
         <image name="home" width="35" height="35"/>
         <image name="home_selected" width="35" height="35"/>
+        <image name="link-post" width="74" height="74"/>
+        <image name="photo-post" width="74" height="74"/>
         <image name="post" width="50" height="35"/>
+        <image name="quote-post" width="74" height="74"/>
         <image name="search" width="35" height="35"/>
         <image name="search_selected" width="35" height="35"/>
         <image name="text-post" width="74" height="74"/>
         <image name="tip" width="25" height="13"/>
+        <image name="video-post" width="74" height="74"/>
     </resources>
 </document>

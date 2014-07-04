@@ -8,11 +8,14 @@
 
 #import "DashboardViewController.h"
 
+#define RADIANS(degrees) ((degrees * M_PI) / 180.0)
+
 @interface DashboardViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *dashboardScrollView;
 @property (weak, nonatomic) IBOutlet UIView *loginViewContainer;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UIView *overlay;
+@property (weak, nonatomic) IBOutlet UIImageView *homeLines;
 
 - (IBAction)onCancelButton:(id)sender;
 @end
@@ -49,9 +52,10 @@
     self.loginViewContainer.layer.cornerRadius = 2;
     self.loginViewContainer.center = CGPointMake(self.loginViewContainer.center.x, 300);
     self.loginViewContainer.alpha = (0);
-    
+}
 
-    
+-(void)viewDidAppear:(BOOL)animated{
+    [self runSpinAnimationOnView:self.homeLines duration:3 rotations:0.1 repeat:10000];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,17 +69,42 @@
     return UIStatusBarStyleLightContent;
 }
 
+
+
+// Rotation Animation
+- (void) runSpinAnimationOnView:(UIView*)view duration:(CGFloat)duration rotations:(CGFloat)rotations repeat:(float)repeat;
+{
+    CABasicAnimation* rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ * rotations * duration ];
+    rotationAnimation.duration = duration;
+    rotationAnimation.cumulative = YES;
+    rotationAnimation.repeatCount = repeat;
+    
+    [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+}
+
+
+
+
+
 - (void) onLoginButton{
+    [UIView animateWithDuration:0.6 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.overlay.alpha = (0.95);
+    } completion:nil];
     
     [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.loginViewContainer.center = CGPointMake(self.loginViewContainer.center.x, 200);
-        self.loginViewContainer.alpha = (1);
-        self.overlay.alpha = (0.9);
     } completion:nil];
     
-    [self.emailTextField becomeFirstResponder];
+    [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.loginViewContainer.alpha = (1);
+    } completion:nil];
     
-
+    
+    
+    
+    [self.emailTextField becomeFirstResponder];
 }
 
 - (IBAction)onCancelButton:(id)sender {

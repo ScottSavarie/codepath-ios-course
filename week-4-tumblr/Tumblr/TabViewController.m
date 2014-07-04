@@ -40,6 +40,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *tooltipTextLabel;
 @property (weak, nonatomic) IBOutlet UIView *postOverlay;
 @property (weak, nonatomic) IBOutlet UIView *textPostContainer;
+@property (weak, nonatomic) IBOutlet UIView *photoPostContainer;
+@property (weak, nonatomic) IBOutlet UIView *quotePostContainer;
+@property (weak, nonatomic) IBOutlet UIView *linkPostContainer;
+@property (weak, nonatomic) IBOutlet UIView *hiPostContainer;
+@property (weak, nonatomic) IBOutlet UIView *videoPostContainer;
 
 
 
@@ -93,16 +98,17 @@
     
     //Setup tool tip
     self.tooltipTextLabel.layer.cornerRadius = 3;
-    [self performSelector:@selector(toolTipBounce) withObject:nil afterDelay:0.1f];
     
     
     // Overlay and Button setup
+    [self overlayDefaults];
     
-    self.postOverlay.alpha = (0);
-    self.textPostContainer.alpha = (0);
-    self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 800);
-    self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 800);
-    self.nevermindButton.alpha = (0);
+}
+
+
+- (void) viewDidAppear:(BOOL)animated{
+    // Initial Tooltip bounce
+    [self toolTipBounce];
     
 }
 
@@ -121,6 +127,29 @@
         self.tooltipContainer.center = CGPointMake(self.tooltipContainer.center.x, 480);
     } completion:nil];
 
+}
+
+
+
+- (void)overlayDefaults{
+    self.postOverlay.alpha = (0);
+    
+    self.textPostContainer.alpha = (0);
+    self.photoPostContainer.alpha = (0);
+    self.quotePostContainer.alpha = (0);
+    self.linkPostContainer.alpha = (0);
+    self.hiPostContainer.alpha = (0);
+    self.videoPostContainer.alpha = (0);
+    
+    self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 800);
+    self.photoPostContainer.center = CGPointMake(self.photoPostContainer.center.x, 800);
+    self.quotePostContainer.center = CGPointMake(self.quotePostContainer.center.x, 800);
+    self.linkPostContainer.center = CGPointMake(self.linkPostContainer.center.x, 800);
+    self.hiPostContainer.center = CGPointMake(self.hiPostContainer.center.x, 800);
+    self.videoPostContainer.center = CGPointMake(self.videoPostContainer.center.x, 800);
+    
+    self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 800);
+    self.nevermindButton.alpha = (0);
 }
 
 - (IBAction)onDashButton:(id)sender{
@@ -148,7 +177,6 @@
     self.activityButton.selected = NO;
     self.SearchViewController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.SearchViewController.view];
-    
     self.tooltipContainer.alpha = (0);
 
 }
@@ -161,19 +189,49 @@
     self.postButton.selected = YES;
     self.accountButton.selected = NO;
     self.activityButton.selected = NO;
-    [self toolTipBounce];
+    [self overlayDefaults];
     
+    [UIView animateWithDuration:0.6 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.postOverlay.alpha = (0.95);
+    } completion:nil];
     
-    [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        self.postOverlay.alpha = (0.8);
-        self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 200);
+    [UIView animateWithDuration:0.7 delay:0.1 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 190);
         self.textPostContainer.alpha = (1);
-        self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 523);
-        self.nevermindButton.alpha = (1);
-
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.photoPostContainer.center = CGPointMake(self.photoPostContainer.center.x, 190);
+        self.photoPostContainer.alpha = (1);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.2 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.quotePostContainer.center = CGPointMake(self.quotePostContainer.center.x, 190);
+        self.quotePostContainer.alpha = (1);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.4 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.linkPostContainer.center = CGPointMake(self.linkPostContainer.center.x, 320);
+        self.linkPostContainer.alpha = (1);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.3 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.hiPostContainer.center = CGPointMake(self.hiPostContainer.center.x, 320);
+        self.hiPostContainer.alpha = (1);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.5 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.videoPostContainer.center = CGPointMake(self.videoPostContainer.center.x, 320);
+        self.videoPostContainer.alpha = (1);
     } completion:nil];
 
 
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 540);
+        self.nevermindButton.alpha = (1);
+    } completion:nil];
+
+    
 }
 
 
@@ -186,7 +244,6 @@
     self.activityButton.selected = NO;
     self.AccountViewController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.AccountViewController.view];
-
     [self toolTipBounce];
 
 }
@@ -201,24 +258,52 @@
     self.activityButton.selected = YES;
     self.ActivityNavigationController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.ActivityNavigationController.view];
-
     [self toolTipBounce];
-
 
 }
 
 - (IBAction)onNevermindButton:(id)sender {
-    
-    [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.7 delay:0.7 usingSpringWithDamping:0.6 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.postOverlay.alpha = (0);
-        self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, 500);
-        self.textPostContainer.alpha = (0);
-        self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 800);
-        self.nevermindButton.alpha = (0);
+    } completion:nil];
 
+    
+    [UIView animateWithDuration:0.7 delay:0.1 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.textPostContainer.center = CGPointMake(self.textPostContainer.center.x, -600);
+        self.textPostContainer.alpha = (0);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.photoPostContainer.center = CGPointMake(self.photoPostContainer.center.x, -600);
+        self.photoPostContainer.alpha = (0);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.15 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.quotePostContainer.center = CGPointMake(self.quotePostContainer.center.x, -600);
+        self.quotePostContainer.alpha = (0);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.35 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.linkPostContainer.center = CGPointMake(self.linkPostContainer.center.x, -600);
+        self.linkPostContainer.alpha = (0);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.25 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.hiPostContainer.center = CGPointMake(self.hiPostContainer.center.x, -600);
+        self.hiPostContainer.alpha = (0);
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.7 delay:0.45 usingSpringWithDamping:0.8 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.videoPostContainer.center = CGPointMake(self.videoPostContainer.center.x, -600);
+        self.videoPostContainer.alpha = (0);
     } completion:nil];
     
     
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.nevermindButton.center = CGPointMake(self.nevermindButton.center.x, 800);
+        self.nevermindButton.alpha = (0);
+    } completion:nil];
+
 }
 
 

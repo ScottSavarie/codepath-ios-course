@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="dashboardScrollView" destination="JEX-8E-prz" id="Pte-7P-hkF"/>
                 <outlet property="emailTextField" destination="QpG-1i-mZD" id="T2h-VX-uDw"/>
+                <outlet property="homeLines" destination="XDv-hn-O4m" id="0f2-jK-AT9"/>
                 <outlet property="loginViewContainer" destination="uUr-C1-JU9" id="aO4-tR-9Be"/>
                 <outlet property="overlay" destination="VIE-0a-aNA" id="1v1-u3-lrn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,15 +23,27 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-lines" id="XDv-hn-O4m">
+                            <rect key="frame" x="96" y="107" width="129" height="157"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" id="hX6-YP-PZh">
+                            <rect key="frame" x="59" y="160" width="202" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-icon" id="PzB-BH-kjq">
+                            <rect key="frame" x="135" y="155" width="50" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is your Dashboard." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YXa-FA-wC7">
-                            <rect key="frame" x="59" y="189" width="202" height="41"/>
+                            <rect key="frame" x="59" y="213" width="202" height="41"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" red="0.60746890649056906" green="0.63391745547185663" blue="0.75283003826530615" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you follow some blogs, their latest posts will show up here!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sst-OP-1wk">
-                            <rect key="frame" x="33" y="219" width="255" height="63"/>
+                            <rect key="frame" x="33" y="233" width="255" height="63"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                             <color key="textColor" red="0.60746890649999996" green="0.6339174555" blue="0.75283003829999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,17 +74,17 @@
                                 <view contentMode="scaleToFill" id="gKh-5A-FDG" userLabel="emailBottom">
                                     <rect key="frame" x="0.0" y="48" width="280" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.79470802919708039" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.90086894132653061" green="0.90086894132653061" blue="0.90086894132653061" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <view contentMode="scaleToFill" id="P0s-YU-e56" userLabel="passwordBottom">
                                     <rect key="frame" x="0.0" y="95" width="280" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.79470802920000005" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.90086894132653061" green="0.90086894132653061" blue="0.90086894132653061" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <view contentMode="scaleToFill" id="8OG-CM-MOn" userLabel="Vert">
                                     <rect key="frame" x="140" y="95" width="1" height="47"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.79470802920000005" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.90086894132653061" green="0.90086894132653061" blue="0.90086894132653061" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rjb-H4-z8g">
                                     <rect key="frame" x="0.0" y="95" width="141" height="46"/>
@@ -95,10 +108,10 @@
                                     </state>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.10225726799767011" green="0.13583502152156518" blue="0.18518813775510201" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.090900240389999998" green="0.12074873849999999" blue="0.16462053569999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.26400000000000001" green="0.34906666669999997" blue="0.44" alpha="1" colorSpace="deviceRGB"/>
@@ -106,4 +119,9 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="gradient" width="432" height="141"/>
+        <image name="home-icon" width="66" height="70"/>
+        <image name="home-lines" width="129" height="128"/>
+    </resources>
 </document>
