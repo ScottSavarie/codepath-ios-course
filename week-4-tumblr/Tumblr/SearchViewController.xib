@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
+                <outlet property="loadingOne" destination="EsQ-Jf-zEK" id="6yg-2t-OZY"/>
+                <outlet property="loadingThree" destination="Pbv-Ga-VrB" id="efs-9W-3CU"/>
+                <outlet property="loadingTwo" destination="Ken-n7-sv4" id="tOb-8V-mtO"/>
                 <outlet property="searchScrollView" destination="iLm-Q4-s4U" id="ffu-vA-Xca"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,6 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" id="EsQ-Jf-zEK" userLabel="loading1">
+                    <rect key="frame" x="120" y="254" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="Ken-n7-sv4" userLabel="loading2">
+                    <rect key="frame" x="150" y="254" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="Pbv-Ga-VrB" userLabel="loading3">
+                    <rect key="frame" x="180" y="254" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" id="iLm-Q4-s4U" userLabel="search Scroll view">
                     <rect key="frame" x="-20" y="-20" width="360" height="588"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

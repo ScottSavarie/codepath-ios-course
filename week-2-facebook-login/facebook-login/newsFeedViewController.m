@@ -85,8 +85,6 @@
 
 
 // Show News Feed after 2 seconds
-
-
 -(void)newsFeedAnimation{
     [UIView animateWithDuration:.3 animations:^{
         self.newsFeedScroll.alpha = 1;

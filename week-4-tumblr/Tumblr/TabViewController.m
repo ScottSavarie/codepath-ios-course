@@ -177,7 +177,10 @@
     self.activityButton.selected = NO;
     self.SearchViewController.view.frame = self.contentView.frame;
     [self.contentView addSubview:self.SearchViewController.view];
+    
     self.tooltipContainer.alpha = (0);
+
+
 
 }
 

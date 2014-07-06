@@ -10,6 +10,9 @@
 
 @interface SearchViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *searchScrollView;
+@property (weak, nonatomic) IBOutlet UIView *loadingOne;
+@property (weak, nonatomic) IBOutlet UIView *loadingTwo;
+@property (weak, nonatomic) IBOutlet UIView *loadingThree;
 
 @end
 
@@ -33,15 +36,60 @@
     
     [self setNeedsStatusBarAppearanceUpdate];
 
-
-
+    // hide Search Scroll
+    self.searchScrollView.alpha = (0);
+    [self searchScrollAnimation];
+    
+    
+    //hide loading images
+    self.loadingOne.alpha = (0);
+    self.loadingTwo.alpha = (0);
+    self.loadingThree.alpha = (0);
+    
+    //loading animation
+    [self loadingAnimation];
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+// Show Scrollview after 3 seconds
+-(void)searchScrollAnimation{
+    [UIView animateWithDuration:0.3 delay:3 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.searchScrollView.alpha = 1;
+    } completion:nil];
+}
+
+
+
+// Loading animation
+
+-(void)loadingAnimation{
+    
+        [UIView animateWithDuration:0.5 delay:0.25 options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.loadingOne.alpha = (1);
+        } completion:nil];
+    
+        [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.loadingTwo.alpha = (1);
+        } completion:nil];
+
+        [UIView animateWithDuration:0.5 delay:0.75 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.loadingThree.alpha = (1);
+        } completion:nil];
+
+}
+
+
+
+
+
 
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
