@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>276A5EE5-0462-4964-8478-DA267E674C3A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>codepath-week5</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8CBE18A2-5E20-4854-8754-501A27221181</key>
+		<string>https://github.com/ScottSavarie/codepath-ios-course.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>week-5-instagram/codepath-week5/codepath-week5.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8CBE18A2-5E20-4854-8754-501A27221181</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ScottSavarie/codepath-ios-course.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8CBE18A2-5E20-4854-8754-501A27221181</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8CBE18A2-5E20-4854-8754-501A27221181</string>
+			<key>IDESourceControlWCCName</key>
+			<string>codepath-ios-course</string>
+		</dict>
+	</array>
+</dict>
+</plist>
